@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <title>JV Wealth Advisory</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Example Company</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <!-- Language switch button -->
+    <div class="language-switch">
+        <a href="index_zh.html" id="languageButton">中文</a>
+    </div>
+    
+    <section id="team" class="section">
+        <div class="container">
+            <h2>Team Introduction</h2>
+            <div class="team-member">
+                <h3>John Doe</h3>
+                <p>CEO</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: info@example.com</p>
+            <p>Address: 123 Example St, Example City</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Example Company. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

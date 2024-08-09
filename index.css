@@ -6,10 +6,6 @@ body {
     padding: 0;
 }
 
-.section {
-    padding: 5px;
-}
-
 .container {
     width: 80%;
     margin: 0 auto;
@@ -35,34 +31,6 @@ footer {
     margin: 1rem 2rem;
 }
 
-/* 引入英文和中文字体 */
-@font-face {
-    font-family: 'EnglishFont';
-    src: url('fonts/english-font.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'ChineseFont';
-    src: url('fonts/chinese-font.ttf') format('truetype');
-}
-
-/* 默认中文字体 */
-body {
-    font-family: 'ChineseFont', sans-serif;
-}
-
-/* 针对英文文本的特定样式 */
-.english-text {
-    font-family: 'EnglishFont', sans-serif;
-    color: blue;
-}
-
-/* 针对中文文本的特定样式 */
-.chinese-text {
-    font-family: 'ChineseFont', sans-serif;
-    color: red;
-}
-
 #home {
     height: 100vh;
     z-index: 100px;
@@ -74,7 +42,7 @@ body {
     height: 80%;
     position: relative;
     overflow:hidden;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 10px;
     margin: auto;
 }
@@ -162,7 +130,7 @@ button.next {
     right: 10px;
 }
 
-#about{
+.about1{
     padding-top: 300px;
     z-index: -500;
     top: -300px;
@@ -175,20 +143,29 @@ button.next {
 #about .aboutus {
     position: relative;
     width: 90%;
-    height: 300px;
+    /* height: fit-content; */
     margin-top: 40px;
     background-color:#ffffff;
     border-radius: 20px;
+    margin-bottom: 50px;
 }
 
 .aboutus h2 {
     margin: 10px 30px;
+    margin-top: 40px;
 }
+
+.aboutus_background1 {
+    position: relative;
+    display: flex;
+}
+
 
 .aboutus_background {
     margin: 20px 20px;
     padding: 10px 10px;
-    width: 50%;
+    width: 55%;
+    height: fit-content;
     border-radius: 10px;
     position: relative;
     background-color: rgba(174, 174, 174, 0.5);
@@ -198,8 +175,155 @@ button.next {
     margin: 10px 20px;
 }
 
-.aboutus img {
-    width: 40%;
-    height: 200px;
-    
+.aboutus_background1 img {
+    position: relative;
+    width: 30%;
+    height: 300px;
+    margin: 20px 20px;
 }
+
+.vision_mission {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+}
+
+.vision {
+    width: 40%;
+    margin-left: 5%;
+    min-width: 380px;
+}
+
+.vision h2 {
+    text-align: center;
+    width: 50%;
+    background-color: #f8f8f8;
+    margin: 0;
+    border-bottom: #333 solid 3px;
+}
+
+.vision p {
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    width: 85%;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    border-bottom: #333 solid 3px;
+    border-left: #333 solid 3px;
+    margin: 0;
+    padding: 20px 20px;
+}
+
+.straight_line {
+    height: 300px;
+    width: 8px;
+    background-color: #f8f8f8;
+    border-bottom: #9f9f9f solid 3px;
+}
+
+.mission {
+    width: 40%;
+    margin-left: 5%;
+    min-width: 380px;
+}
+.mission h2 {
+    text-align: center;
+    width: 50%;
+    background-color: #f8f8f8;
+    margin: 0;
+    border-bottom: #333 solid 3px;
+}
+
+.mission p {
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    width: 85%;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    border-bottom: #333 solid 3px;
+    border-left: #333 solid 3px;
+    margin: 0;
+    padding: 20px 20px;
+}
+
+.about2 hr {
+    background-color: #f8f8f8;
+    width: 60%;
+    height: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: #9f9f9f solid 3px;
+}
+
+.value {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.value h2 {
+    text-align: center;
+    width: 50%;
+    background-color: #f8f8f8;
+    margin: 0;
+    border-bottom: #333 solid 3px;
+}
+
+.value ul {
+    font-size: 30px;
+    justify-content: content;
+    text-align: justify;
+    width: 96%;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    border-bottom: #333 solid 3px;
+    border-left: #333 solid 3px;
+    margin: 0;
+    padding: 20px 40px;
+}
+
+.card_container {
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.card {
+    margin: 20px 20px;
+    display: flex;
+    width: 70%;
+    height: fit-content;
+    background-color: #fff;
+    border-top: #333 solid 2px;
+    border-bottom: #333 solid 2px;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+}
+
+.card_info .small {
+    font-size: 15px;
+}
+
+.card_info {
+    width: 70%;
+}
+
+.card_info h2 {
+    width: 100%;
+}
+
+.card_info p {
+    width: 100%;
+}
+

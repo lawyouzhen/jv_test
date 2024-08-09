@@ -186,13 +186,20 @@ button.next {
 }
 
 .aboutus_background {
-    margin: 0 20px;
+    margin: 20px 20px;
+    padding: 10px 10px;
     width: 50%;
     border-radius: 10px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(174, 174, 174, 0.5);
 }
 
 .aboutus_background p {
     margin: 10px 20px;
+}
+
+.aboutus img {
+    width: 40%;
+    height: 200px;
+    
 }

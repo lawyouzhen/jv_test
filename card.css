@@ -1,0 +1,36 @@
+.card_container {
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.card {
+    margin: 20px 20px;
+    display: flex;
+    width: 70%;
+    height: fit-content;
+    background-color: #fff;
+    border-top: #333 solid 2px;
+    border-bottom: #333 solid 2px;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+}
+
+.card_info .small {
+    font-size: 15px;
+}
+
+.card_info {
+    width: 70%;
+}
+
+.card_info h2 {
+    width: 100%;
+}
+
+.card_info p {
+    width: 100%;
+}

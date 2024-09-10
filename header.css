@@ -1,11 +1,12 @@
 header {
-    background: #407AAC;
+    background: #3a67b1;
     color: #fff;
     padding: 1rem 0;
     top: 0;
     position: sticky;
     width: 100%;
     z-index: 500;
+    border-bottom: rgba(0, 0, 0, 0.25) solid 5px;
 }
 
 header .container {
@@ -16,20 +17,66 @@ header .container {
 
 header h1 {
     margin: 0;
+    font-size: 40px;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav li {
+header nav li {
     margin-left: 1rem;
+    position: relative;
 }
 
-nav a {
+header nav a {
     color: #fff;
     text-decoration: none;
+    padding: 0 10px;
+}
+
+header .dropdown {
+    width: 250%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1419217b;
+    padding: 0.5rem;
+    border: 1px solid #fff;
+}
+
+header .dropdown li {
+    margin: 0.5rem 0;
+}
+
+header nav li:hover > .dropdown {
+    display: block;
+}
+
+
+header nav ul li::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.5s ease-in-out;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+
+header nav a.active {
+    background-color: #ffffff !important; /* 强制应用白色背景 */
+    color: #000 !important; /* 强制应用黑色文字 */
+    border-radius: 3px;
+    width: 100%;
 }

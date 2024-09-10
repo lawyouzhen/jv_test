@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="service.css">
     <link rel="stylesheet" type="text/css" href="header.css">
     <title>JV Wealth Advisory</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Example Company</h1>
+            <h1>JV Wealth Advisory</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="contact_us.html">Contact Us</a></li>
                 </ul>
@@ -31,14 +31,23 @@
 
 
     <section id="services" class="section">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p>We offer the following services:</p>
-            <ul>
-                <li>Consulting</li>
-                <li>Investment Planning</li>
-                <li>Portfolio Management</li>
-            </ul>
+        <div class="bgbox">
+            <div class="block" style="height: 120px;">
+                <h2>Our Services</h2>
+                <p>JV Wealth Advisory provide ........</p>
+            </div>
+            <div class="service-container">
+                <div class="box">
+
+                </div>
+                <div class="box">
+
+                </div>
+            </div>
+            <div class="wave-container">
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
         </div>
     </section>
     
@@ -48,13 +57,13 @@
         </div>
     </footer>
     
-    <script>
+    <!-- <script>
         // Load the header
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-container').innerHTML = data;
             });
-    </script>
+    </script> -->
 </body>
 </html>

@@ -8,6 +8,7 @@ body {
 
 .our_company_title {
     position: relative;
+    height: 200px;
 }
 
 .our_company_title img {

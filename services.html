@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="service.css">
     <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="card.css">
+
     <title>JV Wealth Advisory</title>
 </head>
 <body>
@@ -13,43 +15,43 @@
             <h1>JV Wealth Advisory</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li><a href="services.html">Our Services</a></li>
-                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="index.html" class="nav-link" id="homelink">Home</a></li>
+                    <li>
+                        <a href="#" class="nav-link" id="aboutUsLink">About Us</a>
+                        <ul id="dropdownMenu" class="dropdown">
+                            <li><a href="our_company.html">Our Company</a></li>
+                            <li><a href="v_m_v.html">Vision, Mission & Value</a></li>
+                            <li><a href="achievement.html">Achievement</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html" class="nav-link" id="servicesLink">Our Services</a></li>
+                    <li><a href="contact_us.html" class="nav-link" id="contactLink">Contact Us</a></li>                    
+                    <li><a href="career.html" class="nav-link" id="careerLink">Career</a></li>                    
+
+                    <li>
+                        <div class="language-switch">
+                            <a href="index_zh.html" id="languageButton">中文</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
+
     
-    
-    <!-- Language switch button -->
-    <div class="language-switch">
-        <a href="index_zh.html" id="languageButton">中文</a>
-    </div>
-
-
-
-    <section id="services" class="section">
-        <div class="bgbox">
-            <div class="block" style="height: 120px;">
-                <h2>Our Services</h2>
-                <p>JV Wealth Advisory provide ........</p>
-            </div>
-            <div class="service-container">
-                <div class="box">
-
+    <div class="card_container"></div>
+        <div class="card">
+            <img src="jvlogo.png" alt="">
+            <div class="card_info">
+                <h2>JV WEALTH ADVISORY <span class="small">(JM002937617-D)</span></h2>
+                <p>No. 21-02, Jalan Ros Merah 2/8, Taman Johor Jaya, 81100, Johor Bahru, Johor, Malaysia.</p>
+                <div class="card_info1">
+                    <p>+6011 - 1677 2315  |  +6012 - 720 0251</p>
+                    <p> Jvwealthadvisory@gmail.com</p>
                 </div>
-                <div class="box">
-
-                </div>
-            </div>
-            <div class="wave-container">
-                <div class="wave"></div>
-                <div class="wave"></div>
             </div>
         </div>
-    </section>
+    </div>
     
     <footer>
         <div class="container">
@@ -57,13 +59,43 @@
         </div>
     </footer>
     
-    <!-- <script>
-        // Load the header
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const aboutUsLink = document.getElementById('aboutUsLink');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            let isMenuVisible = false;
+
+            // Toggle dropdown menu
+            aboutUsLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                isMenuVisible = !isMenuVisible;
+                dropdownMenu.style.display = isMenuVisible ? 'block' : 'none';
             });
-    </script> -->
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!aboutUsLink.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.style.display = 'none';
+                    isMenuVisible = false;
+                }
+            });
+
+            // Add active class to the current page's nav link
+            const currentPage = window.location.href.split('/').pop(); // 获取当前页面文件名
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage || currentPage === '' && link.getAttribute('href') === 'index.html') {
+                    link.classList.add('active');
+                }
+            });
+            const aboutUsPages = ['our_company.html', 'v_m_v.html', 'achievement.html'];
+    
+            if (aboutUsPages.includes(currentPage)) {
+                aboutUsLink.classList.add('active'); // 为"About Us"项添加 active 类
+            }
+        });
+    </script>
 </body>
+
 </html>

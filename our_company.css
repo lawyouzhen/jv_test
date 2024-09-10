@@ -6,19 +6,6 @@ body {
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-footer {
-    background: #3a67b1;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-
 .our_company_title {
     position: relative;
 }

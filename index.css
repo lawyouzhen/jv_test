@@ -476,8 +476,8 @@ button.next {
 }
 
 .facebook_comment img {
-    top: 60px;
-    left: 60px;
+    top: 5%;
+    left: 3%;
     position: absolute;
     width: 350px;
     margin: 2.5% 2.5%;
@@ -490,12 +490,15 @@ button.next {
     flex-wrap: wrap;
     justify-content: center;
     width: 50%;
-    left: 35%;
+    left: 32%;
 }
 
 .comment_content h2 {
     font-size: 50px;
     width: 100%;
+    position: relative;
+    margin: unset;
+    left: 10%;
     text-align: right;
 }
 
@@ -504,7 +507,7 @@ button.next {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 165%;
+    width: 168%;
 }
 
 .iframe-container {

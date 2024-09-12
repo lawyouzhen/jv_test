@@ -6,41 +6,21 @@ body {
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-footer {
-    background: #3a67b1;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+.green {
+    color: #41C757;
 }
 
 .v_m_v_title {
+    background-size: 100%;
+    background-color: rgba(183, 225, 241, 0.919);
+    background-image: url(pictures/about_us_bg.png);
     position: relative;
-}
-
-.v_m_v_title img {
-    width: 100%;
-    z-index: -3;
-    position: absolute;
-}
-
-.v_m_v_title::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(151, 202, 222, 0.6); 
-    z-index: -2;
+    height: 250px;
 }
 
 
 .v_m_v_title h2 {
+    color: #1B48B2 ;
     display: inline-flex;
     justify-content: center;
     width: fit-content;
@@ -48,6 +28,9 @@ footer {
     background-color: transparent;
     height: fit-content;
     z-index: 0;
+    margin-left: 20%;
+    font-size: 50px;
+    margin-bottom: unset;
 }
 
 .v_m_v_title h2::before {
@@ -58,11 +41,27 @@ footer {
     left: 0;
     width: 100%;
     height: 25%;
-    background-color: #1B48B2; 
+    background-color: rgba(85, 255, 0, 0.35); 
     transform: translateY(-50%); 
 }
 
+.v_m_v_title p {
+    color: #1B48B2 ;
+    width: 60%;
+    text-align: right;
+    background-color: rgba(85, 255, 0, 0.35);
+    font-size: 25px;
+    margin-top: unset;
+    margin-left: 20%;
+}
+
+.aboutus2 {
+    z-index: 3;
+    background: linear-gradient(180deg, #FFFFFF 0%, #CCF2CA 50%, #FFFFFF 100%);
+
+}
 .vision_mission_value {
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -74,28 +73,31 @@ footer {
     width: 25%;
     min-width: 200px;
     margin: 20px 30px;
+    margin-top: 50px;
 }
 
 .vision img, .mission img , .value img {
     width: 95%;
-    height: fit-content;
+    height: 40%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    z-index: -11;
 }
 
 .vision .icon, .mission .icon , .value .icon {
-    z-index: 1;
+    z-index: 5;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 5%;
-    height: 5%;
+    width: 10%;
+    height: 10%;
+    top: -135px;
 }
 
 .vision_background, .value_background {
     position: relative;
-    top: -20px;
+    top: -170px;
     z-index: -10;
     background: #56BDA3;
     border: 12.5085px solid #2A9673;
@@ -103,7 +105,7 @@ footer {
 
 .mission_background {
     position: relative;
-    top: -20px;
+    top: -170px;
     z-index: -10;
     background: #6F91C9;
     border: 12.5085px solid #3A67B1;

@@ -5,3 +5,280 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.green {
+    color: #41C757;
+}
+
+.achievement_title {
+    background-size: 100%;
+    background-color: rgba(183, 225, 241, 0.919);
+    background-image: url(pictures/about_us_bg.png);
+    position: relative;
+    height: 250px;
+}
+
+.achievement_title h2 {
+    color: #1B48B2 ;
+    display: inline-flex;
+    justify-content: center;
+    width: fit-content;
+    position: relative;
+    background-color: transparent;
+    height: fit-content;
+    z-index: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 50px;
+    margin-bottom: unset;
+}
+
+.achievement_title h2::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: rgba(85, 255, 0, 0.35); 
+    transform: translateY(-50%); 
+}
+
+.achievement_title p {
+    color: #1B48B2 ;
+    width: 80%;
+    text-align: right;
+    background-color: rgba(85, 255, 0, 0.35);
+    font-size: 25px;
+    margin-top: unset;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.achievement {
+    margin-top: 20px;
+    background-image: url(pictures/achievement_bg.png);
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.achievement_content {
+    width: 35%;
+}
+.achievement h2 {
+    margin: 50px 50px;
+    font-size: 50px;
+}
+
+.achievement p {
+    margin: 0 50px;
+    font-size: 20px;
+}
+
+/* Carousel Styles */
+.carousel {
+    width: 60%;                   /* Carousel width */
+    min-width: 750px;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    margin: auto 0;
+
+}
+
+@media (max-width :1260px) {
+    .achievement_content {
+        width: 90%;
+    }
+    .carousel {
+        margin: auto;
+    }
+}
+
+@media (max-width :800px) {
+    .carousel {
+        margin: auto;
+        transform: scale(0.7);
+    }
+}
+
+.carousel-inner {
+    display: flex;
+    width: 300%;
+    transition: transform 1s ease;
+}
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+    flex: 1;
+}
+
+.carousel-item img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.carousel-item p {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 10px;
+    background: white;
+    border-radius: 20px;
+    width: fit-content;
+    
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:nth-of-type(1):checked ~ .carousel-inner {
+    transform: translateX(0);
+}
+
+input[type="radio"]:nth-of-type(2):checked ~ .carousel-inner {
+    transform: translateX(-33.333%);
+}
+
+input[type="radio"]:nth-of-type(3):checked ~ .carousel-inner {
+    transform: translateX(-66.666%);
+}
+
+/* Add more transform values for additional images */
+
+.carousel-controls {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.control {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:nth-of-type(1):checked ~ .carousel-controls #control1,
+input[type="radio"]:nth-of-type(2):checked ~ .carousel-controls #control2,
+input[type="radio"]:nth-of-type(3):checked ~ .carousel-controls #control3 {
+    background-color: #333;
+}
+
+/* Add more styles for additional controls */
+
+/* Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.community_contributions {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.cc_bg {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    justify-content: center;
+}
+
+.cc_bg::before {
+    content: '';
+    position: absolute;
+    background: rgba(193, 255, 190, 0.8);
+    border: 8px solid #0E9F56;
+    border-radius: 489px;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    z-index: -3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cc_bg h2 {
+    font-size: 50px;
+    margin: unset;
+}
+
+.cc_img {
+    overflow-x: scroll;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    background: #b0c8ff6a;
+}
+
+.first_row, .second_row {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 40%;
+    margin-top: 2.5%;
+}
+
+.first_row img, .second_row img {
+    height: 95%;
+    width: fit-content;
+}
+
+.first_row img {
+    margin-right: 2.5%;
+}
+
+.second_row img {
+    margin-left: 2.5%;
+}
+
+.cc_img::-webkit-scrollbar {
+    width: 5px; /* 滚动条的宽度 */
+    height: 5px; /* 横向滚动条的高度 */
+}
+
+.cc_img::-webkit-scrollbar-thumb {
+    background-color: #232e29; /* 滚动条的颜色 */
+    border-radius: 10px; /* 圆角滚动条 */
+    border: 3px solid rgba(3, 3, 3, 0.956); /* 滚动条的边框 */
+}
+
+.cc_img::-webkit-scrollbar-track {
+    background-color: rgba(193, 255, 190, 0); /* 滚动条轨道的背景颜色 */
+    border-radius: 10px;
+}

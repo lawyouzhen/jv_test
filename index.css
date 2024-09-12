@@ -290,6 +290,8 @@ button.next {
 }
 .data .green {
     display: contents;
+    font-size: 35px;
+    font-weight: 900;
 }
 
 .img-container {

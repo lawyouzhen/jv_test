@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="achievement.css">
     <title>Achievement</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -24,8 +26,8 @@
                         </ul>
                     </li>
                     <li><a href="services.html" class="nav-link" id="servicesLink">Our Services</a></li>
-                    <li><a href="contact_us.html" class="nav-link" id="contactLink">Contact Us</a></li>                    
-                    <li><a href="career.html" class="nav-link" id="careerLink">Career</a></li>                    
+                    <li><a href="contact_us.html" class="nav-link" id="contactLink">Contact Us</a></li>
+                    <li><a href="career.html" class="nav-link" id="careerLink">Career</a></li>
 
                     <li>
                         <div class="language-switch">
@@ -52,7 +54,7 @@
             <input type="radio" name="carousel" id="slide2">
             <input type="radio" name="carousel" id="slide3">
             <!-- Add more inputs for additional images -->
-    
+
             <div class="carousel-inner">
                 <div class="carousel-item">
                     <img src="pictures/jv_group.jpg" alt="Image 1">
@@ -68,16 +70,18 @@
                 </div>
                 <!-- Add more carousel-item divs for additional images -->
             </div>
-    
+
             <div class="carousel-controls">
                 <label for="slide1" class="control" id="control1"></label>
                 <label for="slide2" class="control" id="control2"></label>
                 <label for="slide3" class="control" id="control3"></label>
                 <!-- Add more labels for additional images -->
             </div>
-    
-            <button class="prev" onclick="document.getElementById('slide1').checked ? document.getElementById('slide3').checked = true : document.querySelector('input[name=carousel]:checked').previousElementSibling.checked = true;">&#10094;</button>
-            <button class="next" onclick="document.getElementById('slide3').checked ? document.getElementById('slide1').checked = true : document.querySelector('input[name=carousel]:checked').nextElementSibling.checked = true;">&#10095;</button>
+
+            <button class="prev"
+                onclick="document.getElementById('slide1').checked ? document.getElementById('slide3').checked = true : document.querySelector('input[name=carousel]:checked').previousElementSibling.checked = true;">&#10094;</button>
+            <button class="next"
+                onclick="document.getElementById('slide3').checked ? document.getElementById('slide1').checked = true : document.querySelector('input[name=carousel]:checked').nextElementSibling.checked = true;">&#10095;</button>
         </div>
     </div>
 
@@ -85,32 +89,19 @@
         <div class="cc_bg">
             <h2>Community <span class="green">contributions</span></h2>
             <div class="cc_img">
-                <div class="first_row">
+                <div class="first_row" id="cc_slider">
                     <img src="pictures/mission.png" alt="">
                     <img src="pictures/mission.png" alt="">
                     <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
+
                 </div>
-                <div class="second_row">
+                <div class="second_row" id="cc_slider">
                     <img src="pictures/mission.png" alt="">
                     <img src="pictures/mission.png" alt="">
                     <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
-                    <img src="pictures/mission.png" alt="">
+
                 </div>
-    
+
             </div>
         </div>
     </div>
@@ -122,13 +113,13 @@
                 <h2>JV WEALTH ADVISORY <span class="small">(JM002937617-D)</span></h2>
                 <p>No. 21-02, Jalan Ros Merah 2/8, Taman Johor Jaya, 81100, Johor Bahru, Johor, Malaysia.</p>
                 <div class="card_info1">
-                    <p>+6011 - 1677 2315  |  +6012 - 720 0251</p>
+                    <p>+6011 - 1677 2315 | +6012 - 720 0251</p>
                     <p> Jvwealthadvisory@gmail.com</p>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Example Company. All rights reserved.</p>
@@ -166,11 +157,57 @@
                 }
             });
             const aboutUsPages = ['our_company.html', 'v_m_v.html', 'achievement.html'];
-    
+
             if (aboutUsPages.includes(currentPage)) {
                 aboutUsLink.classList.add('active'); // 为"About Us"项添加 active 类
             }
         });
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider1 = document.querySelector('.first_row');
+            const slider2 = document.querySelector('.second_row');
+
+            // 复制 slider 中的内容，使其循环滚动
+            const clone1 = slider1.innerHTML;
+            const clone2 = slider2.innerHTML;
+
+            slider1.innerHTML += clone1;  // 将内容翻倍
+            slider2.innerHTML += clone2;  // 将内容翻倍
+
+            let position1 = 0;
+            let position2 = 0;
+            const speed = 1;  // 调整滚动速度
+
+            function scrollSlider() {
+                position1 -= speed;
+                position2 -= speed;
+
+                // 如果第一行的滚动超过一半内容的宽度，则重置位置
+                if (position1 <= -slider1.scrollWidth / 2) {
+                    position1 = 0;
+                }
+                // 如果第二行的滚动超过一半内容的宽度，则重置位置
+                if (position2 <= -slider2.scrollWidth / 2) {
+                    position2 = 0;
+                }
+
+                // 通过 transform 让图片行平滑滚动
+                slider1.style.transform = `translateX(${position1}px)`;
+                slider2.style.transform = `translateX(${position2}px)`;
+
+                // 使用 requestAnimationFrame 实现平滑的无限滚动效果
+                requestAnimationFrame(scrollSlider);
+            }
+
+            // 开始滚动
+            scrollSlider();
+        });
+
+
+
     </script>
 </body>
+
 </html>

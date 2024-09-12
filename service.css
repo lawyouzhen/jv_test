@@ -6,6 +6,10 @@ body {
     padding: 0;
 }
 
+.green {
+    color: #41C757;
+}
+
 .services {
     background-image: url('pictures/scc_background.png');
     background-size: cover;
@@ -27,7 +31,7 @@ h2.serviceh2 {
 }
 
 h3.serviceh3 {
-    color: #28a745;
+    color: #000000;
     font-size: 2em;
     margin: 0 auto;
     margin-left: 100px;

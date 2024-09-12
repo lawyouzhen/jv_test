@@ -60,4 +60,109 @@ p.service-provide {
     height: auto;
 }
 
+.address {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+
+}
+.address_content {
+    width: 50%;
+    position: relative;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    top: -70px;
+    z-index: 1;
+}
+
+.address_content img {
+    margin: 10px 10px;
+}
+
+.address_content p {
+    text-align: center;
+}
+
+.address iframe {
+    position: relative;
+    width: 80%;
+    height: 550px;
+    top: -110px;
+    z-index: 0;
+}
+
+.enquiry {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.enquiry_content {
+    width: 35%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: 1;
+}
+
+.enquiry_content_bg {
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: #44BE97;
+    box-shadow: 0px 0px 63.2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.enquiry_content h2 {
+    margin: 5% 5%;
+    font-size: 30px;
+    color: #1E8543;
+}
+
+.enquiry_content p {
+    color: white;
+    text-align: justify;
+    margin: 0 10%;
+}
+
+.triangle_container {
+    width: 10%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fb_qr_code {
+    width: 30%;
+    height: fit-content;
+    margin: 10px;
+}
+
+.triangle {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #44BE97 0%, #44BE97 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+.triangle2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #44BE97 0%, #44BE97 50%, rgba(255, 255, 255, 0) 50%);    bottom: 0px;
+}
+
+.form {
+    transform: translateX(-10%);
+    width: 35%;
+    background: white;
+    box-shadow: 0px 0px 63.2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+
 

@@ -6,6 +6,57 @@ body {
     padding: 0;
 }
 
+.services {
+    background-image: url('pictures/scc_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+}
+
+.container {
+    text-align: left;
+}
+
+h2.serviceh2 {
+    color: #000000;
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding-top: 70px;
+    margin-left: 100px;
+}
+
+h3.serviceh3 {
+    color: #28a745;
+    font-size: 2em;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.serviceh3::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 5px;
+    background-color: #28a745;
+}
+
+p.service-provide {
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+.panda-icon {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    width: 15vw;
+    height: auto;
+}
+
+
 .green {
     color: #41C757;
 }

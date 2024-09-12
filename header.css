@@ -47,9 +47,13 @@ header .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #1419217b;
+    background-color: #ffffff;
     padding: 0.5rem;
     border: 1px solid #fff;
+}
+
+header nav .dropdown a{
+    color: #000;
 }
 
 header .dropdown li {

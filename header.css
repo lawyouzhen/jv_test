@@ -58,7 +58,6 @@ header nav .dropdown a li{
     margin: unset;
     padding: unset;
     padding: 5px 0px 5px 15px;
-    /* line-height: -10 !important; */
 }
 
 header nav li:hover > .dropdown {

@@ -39,7 +39,7 @@
         </div>
     </header>
 
-    <section class="services">
+    <section class="services" >
     <div class="container">
         <h2 class="serviceh2">HERE WE HAVE</h2>
         <h3 class="serviceh3">Car<span class="green">eer</span></h3>
@@ -48,7 +48,7 @@
     <img src="pictures/panda_icon1.png" alt="Panda Icon" class="panda-icon">
     </section>
 
-    <div class="admin_sales">
+    <div class="admin_sales scroll-hidden" >
         <div class="admin_sales_content">
             <h2>Admin <span class="green">Sales</span></h2>
             <p>Responsibilities:
@@ -71,7 +71,7 @@
         <img src="pictures/admin_sales.png" alt="">
     </div>
 
-    <div class="sales_partner">
+    <div class="sales_partner scroll-hidden">
         <img src="pictures/sales_partner.png" alt="">
         <div class="sales_partner_content">
             <h2>Sales <span class="green">Partner</span></h2>
@@ -96,7 +96,7 @@
         </div>
     </div>
 
-    <div class="telemarketing">
+    <div class="telemarketing scroll-hidden">
         <div class="telemarketing_content">
             <h2>Tele<span class="green">marketing</span></h2>
             <p>Responsibilities:
@@ -120,7 +120,7 @@
         <img src="pictures/telemarketing.png" alt="">
     </div>
 
-    <div class="customer_services">
+    <div class="customer_services scroll-hidden">
         <img src="pictures/customer_services.png" alt="">
         <div class="customer_services_content">
             <h2>Customer <span class="green">Services</span></h2>
@@ -143,7 +143,7 @@
         </div>
     </div>
 
-    <div class="internship">
+    <div class="internship scroll-hidden">
         <div class="internship_content">
             <h2>Intern<span class="green">ship</span></h2>
             <p>Responsibilities:
@@ -172,7 +172,7 @@
         <img src="pictures/internship.png" alt="">
     </div>
 
-    <div class="requirement_benefit">
+    <div class="requirement_benefit scroll-hidden">
         <div class="requirement">
             <h2>Require<span class="green">ment</span></h2>
             <ul>
@@ -218,6 +218,23 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // 创建 Intersection Observer
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible'); // 元素进入视口时添加类
+                    observer.unobserve(entry.target); // 只触发一次，取消对该元素的观察
+                }
+            });
+        });
+
+        // 选中所有带有 .scroll-hidden 类的元素
+        const hiddenElements = document.querySelectorAll('.scroll-hidden');
+        hiddenElements.forEach(el => observer.observe(el)); // 观察每个元素
+        });
+
+
         document.addEventListener('DOMContentLoaded', function () {
             const aboutUsLink = document.getElementById('aboutUsLink');
             const dropdownMenu = document.getElementById('dropdownMenu');

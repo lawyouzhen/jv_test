@@ -38,7 +38,7 @@
         </div>
     </header>
     
-    <div id="home" class="section">
+    <div id="home" class="section" >
         <div class="background"></div>
         <div class="carousel">
             <input type="radio" name="carousel" id="slide1" checked>
@@ -179,6 +179,22 @@
     </footer>
     
     <script>
+        // 使用 Intersection Observer API 检测元素是否进入视口
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-visible');
+            } else {
+            entry.target.classList.remove('scroll-visible');
+            }
+        });
+        });
+
+        // 选中页面中所有需要动画的元素
+        const hiddenElements = document.querySelectorAll('.scroll-hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+
         document.addEventListener('DOMContentLoaded', function () {
             const aboutUsLink = document.getElementById('aboutUsLink');
             const dropdownMenu = document.getElementById('dropdownMenu');

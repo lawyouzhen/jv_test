@@ -6,6 +6,9 @@ body {
     padding: 0;
 }
 
+p {
+    font-size: 18px;
+}
 .green {
     color: #41C757;
 }
@@ -263,8 +266,19 @@ p.service-provide {
     display: flex;
     flex-wrap: wrap;
     width: 40%;
+    margin: 20px 40px;
+}
+.team_photo {
+    width: 40%;
+}
+
+.team_photo img {
+    width: 100%;
+    height: fit-content;
 }
 
 .team_info {
     margin: 20px;
+    width: 50%;
 }
+

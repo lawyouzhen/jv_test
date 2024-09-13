@@ -5,18 +5,25 @@ body {
     margin: 0;
     padding: 0;
 }
-/* 初始状态：元素在屏幕外，透明度为0 */
+
 .scroll-hidden {
     opacity: 0;
-    transform: translateX(100px); /* 从右侧滑入 */
-    transition: all 1s ease-out;
+    transform: translateX(100px); 
+    transition: all 2s ease-out;
 }
 
-/* 当元素进入视口时，滑入动画 */
+.scroll-hidden1 {
+    opacity: 0;
+    transform: translateX(-100px); 
+    transition: all 2s ease-out;
+}
+
 .scroll-visible {
     opacity: 1;
-    transform: translateX(0); /* 滑动到屏幕中的位置 */
+    transform: translateX(0); 
 }
+
+
 .green {
     color: #41C757;
 }

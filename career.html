@@ -71,7 +71,7 @@
         <img src="pictures/admin_sales.png" alt="">
     </div>
 
-    <div class="sales_partner scroll-hidden">
+    <div class="sales_partner scroll-hidden1">
         <img src="pictures/sales_partner.png" alt="">
         <div class="sales_partner_content">
             <h2>Sales <span class="green">Partner</span></h2>
@@ -120,7 +120,7 @@
         <img src="pictures/telemarketing.png" alt="">
     </div>
 
-    <div class="customer_services scroll-hidden">
+    <div class="customer_services scroll-hidden1">
         <img src="pictures/customer_services.png" alt="">
         <div class="customer_services_content">
             <h2>Customer <span class="green">Services</span></h2>
@@ -172,7 +172,7 @@
         <img src="pictures/internship.png" alt="">
     </div>
 
-    <div class="requirement_benefit scroll-hidden">
+    <div class="requirement_benefit scroll-hidden1">
         <div class="requirement">
             <h2>Require<span class="green">ment</span></h2>
             <ul>
@@ -219,20 +219,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-        // 创建 Intersection Observer
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('scroll-visible'); // 元素进入视口时添加类
-                    observer.unobserve(entry.target); // 只触发一次，取消对该元素的观察
+                    entry.target.classList.add('scroll-visible'); 
+                    observer.unobserve(entry.target); 
                 }
             });
         });
 
-        // 选中所有带有 .scroll-hidden 类的元素
-        const hiddenElements = document.querySelectorAll('.scroll-hidden');
-        hiddenElements.forEach(el => observer.observe(el)); // 观察每个元素
-        });
+        const hiddenElementsRight = document.querySelectorAll('.scroll-hidden');
+        hiddenElementsRight.forEach(el => observer.observe(el)); 
+
+        const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
+        hiddenElementsLeft.forEach(el => observer.observe(el)); 
+    });
+
 
 
         document.addEventListener('DOMContentLoaded', function () {

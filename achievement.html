@@ -44,7 +44,7 @@
         <p>About us</p>
     </div>
 
-    <div class="achievement">
+    <div class="achievement scroll-hidden">
         <div class="achievement_content">
             <h2>Our <span class="green">Achievements</span></h2>
             <p>‘Each award represents the hard work and perseverance of the team that made it what it is today.’</p>
@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <div class="community_contributions">
+    <div class="community_contributions scroll-hidden1">
         <div class="cc_bg">
             <h2>Community <span class="green">contributions</span></h2>
             <div class="cc_img">
@@ -127,6 +127,23 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible'); 
+                    observer.unobserve(entry.target); 
+                }
+            });
+        });
+
+        const hiddenElementsRight = document.querySelectorAll('.scroll-hidden');
+        hiddenElementsRight.forEach(el => observer.observe(el)); 
+
+        const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
+        hiddenElementsLeft.forEach(el => observer.observe(el)); 
+    });
+
         document.addEventListener('DOMContentLoaded', function () {
             const aboutUsLink = document.getElementById('aboutUsLink');
             const dropdownMenu = document.getElementById('dropdownMenu');

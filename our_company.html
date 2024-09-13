@@ -44,10 +44,10 @@
     </div>
 
     <div class="blue_background">
-        <div class="ourcompany">
+        <div class="ourcompany scroll-hidden">
             <h2>Welcome to JV <span class="green">Wealth Advisory</span></h2>
             <div class="ourcompany_background1">
-                <div class="ourcompany_background">
+                <div class="ourcompany_background scroll-hidden1">
                     <p>JV Wealth Advisory is a company dedicated to providing comprehensive financial planning and wealth management services to clients. Headquartered in Taman Johor Jaya, Johor Bahru, Malaysia, the company is committed to helping clients achieve their financial goals while ensuring the growth and preservation of their wealth.
                         <br><br>
                         JV Wealth Advisory offers a wide range of services, including investment management, retirement planning, insurance consultation, tax planning, and estate planning. The company focuses on clients' needs, tailoring the most suitable financial solutions through its professional team. JV Wealth Advisory places particular emphasis on supporting single-parent families and elderly parents, offering guidance and support in their financial planning.
@@ -55,7 +55,7 @@
                 </div>
                 <img src="pictures/our_company_1.png" alt="">
                 <img src="pictures/our_company_2.png" alt="">
-                <div class="ourcompany_background">
+                <div class="ourcompany_background scroll-hidden">
                     <p>His company is currently expanding its team and is recruiting for various positions, including administrative sales, sales partners, telemarketing, and customer service assistants, aiming to further enhance its service capabilities.
                         <br><br>
                         Under the leadership of Jason Liew and his team, JV Wealth Advisory continuously strives for excellence, ensuring that every client enjoys personalized financial advisory services, safeguarding the growth of their wealth.
@@ -64,13 +64,13 @@
             </div>
         </div>
     </div>
-    <div class="ourcompany_content">
-        <div class="whyus">
+    <div class="ourcompany_content scroll-hidden">
+        <div class="whyus scroll-hidden1">
             <h2>Why us ?</h2>
             <p>We offer customized financial solutions that are designed to meet your individual goals.
                 Our team comprises seasoned professionals with extensive experience in the financial sector.</p>
         </div>
-        <div class="commitment">
+        <div class="commitment scroll-hidden">
             <h2>Our Commitment</h2>
             <p>At JV Wealth Advisory, we believe in providing transparent, reliable, and professional financial advice. Our goal is to simplify complex financial decisions and help you navigate life's important financial milestones with confidence.</p>
         </div>
@@ -97,6 +97,24 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-visible'); 
+                observer.unobserve(entry.target); 
+            }
+        });
+    });
+
+    const hiddenElementsRight = document.querySelectorAll('.scroll-hidden');
+    hiddenElementsRight.forEach(el => observer.observe(el)); 
+
+    const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
+    hiddenElementsLeft.forEach(el => observer.observe(el)); 
+});
+
+
         document.addEventListener('DOMContentLoaded', function () {
             const aboutUsLink = document.getElementById('aboutUsLink');
             const dropdownMenu = document.getElementById('dropdownMenu');

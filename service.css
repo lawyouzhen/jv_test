@@ -6,6 +6,23 @@ body {
     padding: 0;
 }
 
+.scroll-hidden {
+    opacity: 0;
+    transform: translateX(100px); 
+    transition: all 2s ease-out;
+}
+
+.scroll-hidden1 {
+    opacity: 0;
+    transform: translateX(-100px); 
+    transition: all 2s ease-out;
+}
+
+.scroll-visible {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
 .green {
     color: #41C757;
 }

@@ -77,7 +77,7 @@
 
     <div class="container-item">
         <div class="left-section">
-            <div id="finance-section" class="service-card">
+            <div id="finance-section" class="service-card scroll-hidden">
                 <div class="line-start"></div>
                 <div class="left-column">
                     <h2>Financial Planning</h2>
@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <div id="healthcare-section" class="service-card">
+            <div id="healthcare-section" class="service-card scroll-hidden1">
                 <div class="line-start"></div>
                 <div class="left-column">
                     <h2>Healthcare Planning</h2>
@@ -127,7 +127,7 @@
                 </div>
             </div>
 
-            <div id="legacy-section" class="service-card">
+            <div id="legacy-section" class="service-card scroll-hidden">
                 <div class="line-start"></div>
                 <div class="left-column">
                     <h2>Legacy Planning</h2>
@@ -151,7 +151,7 @@
                 </div>
             </div>
 
-            <div id="claim-section" class="service-card">
+            <div id="claim-section" class="service-card scroll-hidden1">
                 <div class="line-start"></div>
                 <div class="left-column">
                     <h2>Claim Support</h2>
@@ -178,7 +178,7 @@
         </div>
 
         <div class="right-section">
-            <div class="contact-card">
+            <div class="contact-card scroll-hidden">
                 <div class="left-card">
                     <h2>Let's Plan an Online Meeting</h2>
                     <p>We are Available Now</p>
@@ -188,7 +188,7 @@
                 </div>
 
             </div>
-            <div class="below-contact">
+            <div class="below-contact scroll-hidden">
                 <p>Are you interested? Contact our sales department now !!!</p>
                 <p>Erkan Giris / Sales Manager</p>
                 <p>+0(550) 544 7514</p>
@@ -238,6 +238,23 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible'); 
+                    observer.unobserve(entry.target); 
+                }
+            });
+        });
+
+        const hiddenElementsRight = document.querySelectorAll('.scroll-hidden');
+        hiddenElementsRight.forEach(el => observer.observe(el)); 
+
+        const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
+        hiddenElementsLeft.forEach(el => observer.observe(el)); 
+    });
+
         document.addEventListener('DOMContentLoaded', function () {
             const aboutUsLink = document.getElementById('aboutUsLink');
             const dropdownMenu = document.getElementById('dropdownMenu');

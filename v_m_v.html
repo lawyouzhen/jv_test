@@ -48,7 +48,7 @@
 
     <div class="aboutus2">
         <div class="vision_mission_value">
-            <div class="vision">
+            <div class="vision scroll-hidden1">
                 <img src="pictures/vission.png">
                 <img class="icon" src="pictures/vission_logo.png">
                 <div class="vision_background">
@@ -56,7 +56,7 @@
                     <p>Help People Achieve Their Dreams Through Smart Wealth Distribution </p>
                 </div>
             </div>
-            <div class="mission">
+            <div class="mission scroll-hidden2">
                 <img src="pictures/mission.png">
                 <img class="icon" src="pictures/mission_logo.png">
                 <div class="mission_background">
@@ -64,7 +64,7 @@
                     <p>Create Value And Helps People Who Believe in Finance Tools By Our Professional Team</p>
                 </div>
             </div>
-            <div class="value">
+            <div class="value scroll-hidden">
                 <img src="pictures/value.png">
                 <img class="icon" src="pictures/value_logo.png">
                 <div class="value_background">
@@ -119,6 +119,26 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible'); 
+                    observer.unobserve(entry.target); 
+                }
+            });
+        });
+
+        const hiddenElementsRight = document.querySelectorAll('.scroll-hidden');
+        hiddenElementsRight.forEach(el => observer.observe(el)); 
+
+        const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
+        hiddenElementsLeft.forEach(el => observer.observe(el)); 
+
+        const hiddenElementsMiddle = document.querySelectorAll('.scroll-hidden2');
+        hiddenElementsMiddle.forEach(el => observer.observe(el)); 
+    });
+
         document.addEventListener('DOMContentLoaded', function () {
             const aboutUsLink = document.getElementById('aboutUsLink');
             const dropdownMenu = document.getElementById('dropdownMenu');

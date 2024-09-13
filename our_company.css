@@ -6,10 +6,30 @@ body {
     padding: 0;
 }
 
+.scroll-hidden {
+    opacity: 0;
+    transform: translateX(100px); 
+    transition: all 2s ease-out;
+}
+
+.scroll-hidden1 {
+    opacity: 0;
+    transform: translateX(-200px); 
+    transition: all 2s ease-out;
+}
+
+.scroll-visible {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
 .green {
     color: #41C757;
 }
 
+p, a {
+    font-size: 18px;
+}
 .our_company_title {
     background-size: 100%;
     background-image: url(pictures/about_us_bg.png);
@@ -96,7 +116,7 @@ body {
 
 .ourcompany_background p {
     margin: 10px 20px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
 }
 
@@ -130,4 +150,9 @@ body {
 }
 .whyus h2, .commitment h2 {
     color: #4361EE;
+}
+
+.whyus p, .commitment p {
+    margin: 3% 5%;
+    text-align: justify;
 }

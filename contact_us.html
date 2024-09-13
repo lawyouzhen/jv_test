@@ -47,7 +47,7 @@
         <img src="pictures/panda_icon1.png" alt="Panda Icon" class="panda-icon">
     </section>
 
-    <div class="address">
+    <div class="address scroll-hidden1">
         <div class="address_content">
             <img src="pictures/map_pin.png" alt="">
             <p>No. 21-02, Jalan Ros Merah 2/8, Taman Johor Jaya, 81100, Johor Bahru, Johor, Malaysia.</p>
@@ -55,8 +55,8 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.392090247788!2d103.79297290852733!3d1.5320354209289218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6c40cbf98875%3A0x582fac6b6382e3ef!2s21-02%2C%20Jalan%20Ros%20Merah%202%2F8%2C%20Taman%20Johor%20Jaya%2C%2081100%20Johor%20Bahru%2C%20Johor!5e0!3m2!1szh-CN!2smy!4v1726119458402!5m2!1szh-CN!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    <div class="enquiry">
-        <div class="enquiry_content">
+    <div class="enquiry scroll-hidden">
+        <div class="enquiry_content scroll-hidden1">
             <div class="enquiry_content_bg">
                 <h2>Let’s get in touch >>></h2>
                 <p>
@@ -70,8 +70,85 @@
                 <div class="triangle2"></div>
             </div>
         </div>
-        <div class="form">
+        <div class="form scroll-hidden">
             
+        </div>
+    </div>
+
+    <div class="team scroll-hidden">
+        <div class="team_bg">
+            <div class="team_rec_container"></div>
+            <div class="team_tri_container">
+                <div class="team_tri1"></div>
+                <div class="team_tri2"></div>
+            </div>
+            
+            <div class="team_rec_container2"></div>
+        </div>
+        <div class="team_content">
+            <h2>Our Team</h2>
+            <div class="all_team">
+                <div class="team_member scroll-hidden1">
+                    <div class="team_photo">
+                        <img src="pictures/team1.png" alt="">
+                    </div>
+                    <div class="team_info">
+                        <h3>Group manager</h3> 
+                        <p>
+                            <br>Name:                            Aivy Tee
+                            <br>Contact Number:          012-7200251 
+                            <br>Email:                             aivyai10389@gmail.com
+                        </p>
+                        <hr>
+
+                    </div>
+                </div>
+                <div class="team_member scroll-hidden1">
+                    <div class="team_photo">
+                        <img src="pictures/team1.png" alt="">
+                    </div>
+                    <div class="team_info">
+                        <h3>Group manager</h3> 
+                        <p>
+                            <br>Name:                            Aivy Tee
+                            <br>Contact Number:          012-7200251 
+                            <br>Email:                             aivyai10389@gmail.com
+                        </p>
+                        <hr>
+
+                    </div>
+                </div>
+                <div class="team_member scroll-hidden">
+                    <div class="team_photo">
+                        <img src="pictures/team1.png" alt="">
+                    </div>
+                    <div class="team_info">
+                        <h3>Group manager</h3> 
+                        <p>
+                            <br>Name:                            Aivy Tee
+                            <br>Contact Number:          012-7200251 
+                            <br>Email:                             aivyai10389@gmail.com
+                        </p>
+                        <hr>
+
+                    </div>
+                </div>
+                <div class="team_member scroll-hidden">
+                    <div class="team_photo">
+                        <img src="pictures/team1.png" alt="">
+                    </div>
+                    <div class="team_info">
+                        <h3>Group manager</h3> 
+                        <p>
+                            <br>Name:                            Aivy Tee
+                            <br>Contact Number:          012-7200251 
+                            <br>Email:                             aivyai10389@gmail.com
+                        </p>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -108,6 +185,24 @@
     </footer>
     
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible'); 
+                    observer.unobserve(entry.target); 
+                }
+            });
+        });
+
+        const hiddenElementsRight = document.querySelectorAll('.scroll-hidden');
+        hiddenElementsRight.forEach(el => observer.observe(el)); 
+
+        const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
+        hiddenElementsLeft.forEach(el => observer.observe(el)); 
+    });
+
+
         document.addEventListener('DOMContentLoaded', function () {
             const aboutUsLink = document.getElementById('aboutUsLink');
             const dropdownMenu = document.getElementById('dropdownMenu');

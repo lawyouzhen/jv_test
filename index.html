@@ -38,9 +38,9 @@
         </div>
     </header>
     
-    <div id="home" class="section">
+    <div id="home" class="section" >
         <div class="background"></div>
-        <div class="carousel">
+        <div class="carousel scroll-hidden">
             <input type="radio" name="carousel" id="slide1" checked>
             <input type="radio" name="carousel" id="slide2">
             <input type="radio" name="carousel" id="slide3">
@@ -69,13 +69,13 @@
             <button class="prev" onclick="document.getElementById('slide1').checked ? document.getElementById('slide3').checked = true : document.querySelector('input[name=carousel]:checked').previousElementSibling.checked = true;">&#10094;</button>
             <button class="next" onclick="document.getElementById('slide3').checked ? document.getElementById('slide1').checked = true : document.querySelector('input[name=carousel]:checked').nextElementSibling.checked = true;">&#10095;</button>
         </div>
-        <div class="homecontent">
+        <div class="homecontent scroll-hidden1">
             <h2>Plan ahead and navigate safely</h2>
             <p>Planning ahead is an act of wisdom because life is full of unpredictable risks. Insurance provides safe navigation for your every choice, ensuring you face challenges without worries</p>
         </div>
     </div>
 
-    <div class="our_company_summary">
+    <div class="our_company_summary scroll-hidden1">
         <h2>JV Wealth are committed to
             <br><span class="green">Your Life and Your Future</span></h2>
         <p>JV Wealth Advisory is a company dedicated to providing comprehensive financial planning and wealth management services to clients. Headquartered in Taman Johor Jaya, Johor Bahru, Malaysia, the company is ....... </p>
@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <div class="our_product_and_services_summary">
+    <div class="our_product_and_services_summary scroll-hidden">
         <div class="p_s_summary_content">
             <h2>Our <span class="green">Products</span> and <span class="green">Services</span></h2>
             <p>JV Wealth Advisory provide financial planning, healthcare planning, legacy planning and claim support ........</p>
@@ -123,7 +123,7 @@
         </div>
     </div>
 
-    <div class="career_summary">
+    <div class="career_summary scroll-hidden1">
         <div class="career_summary_content">
             <h2>Care<span class="green">er</span></h2>
             <p>At JV Wealth Advisory, we are a team full of opportunities, dedicated to innovation and growth. Whether you're an experienced expert or an ambitious newcomer, we offer a platform for your development. Join us, collaborate with top financial professionals, challenge yourself, and achieve your career aspirations. Together, let's create a brighter future! ....... </p>
@@ -134,24 +134,26 @@
         <img src="pictures/career_bg.png" alt="">
     </div>
 
-    <div class="facebook_comment">
-        <img src="pictures/rates.png" alt="">
-        <div class="comment_content">
-            <h2>What Our Customers Say <span class="green">About Us</span></h2>
-            <div class="iframe-slider">
-                <div class="iframe-container">
-                    <div class="iframe-wrapper">
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheng.meparu%2Fposts%2Fpfbid02o3HFPugeXVSjBuMZzxNd2yE2Ai2tbhh2EuUenBXTTu3pTZbEG7DaTAAd9sLyA4Mtl&show_text=true&width=500" width="500" height="193" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwenchain.clara%2Fposts%2Fpfbid0qpUbKWDG4vZpYBruvDCYW12bKq38KYHAY9aftH8Mvbp8mheSVifSPb6W6o2tRjCMl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fyyyfchan%2Fposts%2Fpfbid026qkjLPVEby6vx77rTnVVQX3VhFfYpYAxvtapxvicoK1xVRDdcct4d5nd4PfrjEnhl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <div class="comment scroll-hidden">
+        <div class="facebook_comment">
+            <img src="pictures/rates.png" alt="">
+            <div class="comment_content">
+                <h2>What Our Customers Say <span class="green">About Us</span></h2>
+                <div class="iframe-slider">
+                    <div class="iframe-container">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheng.meparu%2Fposts%2Fpfbid02o3HFPugeXVSjBuMZzxNd2yE2Ai2tbhh2EuUenBXTTu3pTZbEG7DaTAAd9sLyA4Mtl&show_text=true&width=500" width="500" height="193" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwenchain.clara%2Fposts%2Fpfbid0qpUbKWDG4vZpYBruvDCYW12bKq38KYHAY9aftH8Mvbp8mheSVifSPb6W6o2tRjCMl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fyyyfchan%2Fposts%2Fpfbid026qkjLPVEby6vx77rTnVVQX3VhFfYpYAxvtapxvicoK1xVRDdcct4d5nd4PfrjEnhl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="arrow">
-                <button class="prev" onclick="slideIframes(-1)">&#10094;</button>
-                <button class="next" onclick="slideIframes(1)">&#10095;</button>
+                <div class="arrow">
+                    <button class="prev" onclick="slideIframes(-1)">&#10094;</button>
+                    <button class="next" onclick="slideIframes(1)">&#10095;</button>
+                </div>
             </div>
         </div>
     </div>
@@ -192,6 +194,24 @@
     </footer>
     
     <script>
+         document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-visible'); 
+                    observer.unobserve(entry.target); 
+                }
+            });
+        });
+
+        const hiddenElementsRight = document.querySelectorAll('.scroll-hidden');
+        hiddenElementsRight.forEach(el => observer.observe(el)); 
+
+        const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
+        hiddenElementsLeft.forEach(el => observer.observe(el)); 
+    });
+
+
         document.addEventListener('DOMContentLoaded', function () {
             const aboutUsLink = document.getElementById('aboutUsLink');
             const dropdownMenu = document.getElementById('dropdownMenu');

@@ -6,6 +6,31 @@ body {
     padding: 0;
 }
 
+.scroll-hidden {
+    opacity: 0;
+    transform: translateX(100px); 
+    transition: all 2s ease-out;
+}
+
+.scroll-hidden1 {
+    opacity: 0;
+    transform: translateX(-100px); 
+    transition: all 2s ease-out;
+}
+
+.scroll-hidden2 {
+    opacity: 0;
+    transform: translateY(100px); 
+    transition: all 2s ease-out;
+}
+
+.scroll-visible {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+
+
 .green {
     color: #41C757;
 }
@@ -112,7 +137,8 @@ body {
 }
 
 .vision_background h2, .value_background h2 {
-    margin: 0;
+    margin: 0
+    ;
     font-size: 50px;
     text-align: center;
     background: linear-gradient(180deg, #9AD7C8 53.26%, #00A077 53.27%);
@@ -137,10 +163,12 @@ body {
     text-align: justify;
     color: #FFFFFF;
     margin: 20px 20px;
+    margin-bottom: 10%;
 }
 
 .value_background ul {
     color: #FFFFFF;
     font-size: 20px;
     margin-right: 20px;
+    margin-bottom: 10%;
 }

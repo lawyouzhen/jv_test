@@ -58,6 +58,10 @@ header nav .dropdown a li{
     margin: unset;
     padding: unset;
     padding: 5px 0px 5px 15px;
+    font-size: 16px;
+}
+header nav a {
+    font-size: 16px;
 }
 
 header nav li:hover > .dropdown {

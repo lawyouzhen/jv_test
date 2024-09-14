@@ -12,9 +12,12 @@
 <body>
     <header>
         <div class="container">
-            <h1>JV Wealth Advisory</h1>
+            <div class="jv">
+                <img src="pictures/jvlogo.png" alt="">
+                <h1>JV Wealth Advisory</h1>
+            </div>
             <nav>
-                <ul>
+                <ul id="main-menu">
                     <li><a href="index.html" class="nav-link" id="homelink">Home</a></li>
                     <li>
                         <a href="#" class="nav-link" id="aboutUsLink">About Us</a>
@@ -25,18 +28,22 @@
                         </ul>
                     </li>
                     <li><a href="services.html" class="nav-link" id="servicesLink">Our Services</a></li>
-                    <li><a href="contact_us.html" class="nav-link" id="contactLink">Contact Us</a></li>                    
-                    <li><a href="career.html" class="nav-link" id="careerLink">Career</a></li>                    
-
+                    <li><a href="contact_us.html" class="nav-link" id="contactLink">Contact Us</a></li>
+                    <li><a href="career.html" class="nav-link" id="careerLink">Career</a></li>
                     <li>
                         <div class="language-switch">
                             <a href="index_zh.html" id="languageButton">中文</a>
                         </div>
                     </li>
                 </ul>
+                <div class="hamburger" id="hamburger">
+                    ☰
+                </div>
             </nav>
         </div>
     </header>
+    
+    
     
     <div id="home" class="section" >
         <div class="background"></div>
@@ -103,19 +110,15 @@
                 <span> <a href="services.html">More details</a></span> <!-- 可放置文字或留空 -->
             </div>
             <div class="p_s_container">
-                <div class="p_s">
+                <div class="p_s" onclick="window.location.href='services.html#finance-section'">
                     <h2>Financial Planning</h2>
                     <img src="pictures/finance_image.png" alt="">
                 </div>
-                <div class="p_s">
-                    <h2>Healthcare Planning</h2>
-                    <img src="pictures/healthcare_image.png" alt="">
-                </div>
-                <div class="p_s">
+                <div class="p_s" onclick="window.location.href='services.html#legacy-section'">
                     <h2>Legacy Planning</h2>
                     <img src="pictures/legacy_image.png" alt="">
                 </div>
-                <div class="p_s">
+                <div class="p_s" onclick="window.location.href='services.html#claim-section'">
                     <h2>Claim Support</h2>
                     <img src="pictures/claim_image.png" alt="">
                 </div>    
@@ -194,6 +197,25 @@
     </footer>
     
     <script>
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        const currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('main-menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');  
+        });
+
          document.addEventListener('DOMContentLoaded', function () {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -249,7 +271,7 @@
             const iframeWrapper = document.querySelector('.iframe-wrapper');
             const iframes = document.querySelectorAll('.iframe-wrapper iframe');
             const iframeWidth = iframes[0].offsetWidth + 20; // Include margin
-            const maxIndex = iframes.length - 3; // Show two iframes at once
+            const maxIndex = iframes.length -1 ; // Show two iframes at once
 
             currentIndex += direction;
 

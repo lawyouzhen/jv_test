@@ -47,7 +47,7 @@
         <img src="pictures/panda_icon1.png" alt="Panda Icon" class="panda-icon">
     </section>
 
-    <div class="address scroll-hidden1">
+    <div class="address scroll-hidden2">
         <div class="address_content">
             <img src="pictures/map_pin.png" alt="">
             <p>No. 21-02, Jalan Ros Merah 2/8, Taman Johor Jaya, 81100, Johor Bahru, Johor, Malaysia.</p>
@@ -56,7 +56,7 @@
     </div>
 
     <div class="enquiry scroll-hidden">
-        <div class="enquiry_content scroll-hidden1">
+        <div class="enquiry_content scroll-hidden2">
             <div class="enquiry_content_bg">
                 <h2>Let’s get in touch >>></h2>
                 <p>
@@ -70,7 +70,7 @@
                 <div class="triangle2"></div>
             </div>
         </div>
-        <div class="form scroll-hidden">
+        <div class="form scroll-hidden2">
             
         </div>
     </div>
@@ -87,8 +87,8 @@
         </div>
         <div class="team_content">
             <h2>Our Team</h2>
-            <div class="all_team">
-                <div class="team_member scroll-hidden1">
+            <div class="all_team scroll-hidden1">
+                <div class="team_member">
                     <div class="team_photo">
                         <img src="pictures/team1.png" alt="">
                     </div>
@@ -103,7 +103,7 @@
 
                     </div>
                 </div>
-                <div class="team_member scroll-hidden1">
+                <div class="team_member">
                     <div class="team_photo">
                         <img src="pictures/team1.png" alt="">
                     </div>
@@ -118,7 +118,7 @@
 
                     </div>
                 </div>
-                <div class="team_member scroll-hidden">
+                <div class="team_member">
                     <div class="team_photo">
                         <img src="pictures/team1.png" alt="">
                     </div>
@@ -133,7 +133,7 @@
 
                     </div>
                 </div>
-                <div class="team_member scroll-hidden">
+                <div class="team_member">
                     <div class="team_photo">
                         <img src="pictures/team1.png" alt="">
                     </div>
@@ -154,6 +154,7 @@
 
     <div class="card_container">
         <div class="card">
+            <img src="pictures/jvlogo.png" alt="">
             <div class="card_info">
                 <h2>JV WEALTH ADVISORY <span class="small">(JM002937617-D)</span></h2>
                 <p>No. 21-02, Jalan Ros Merah 2/8, Taman Johor Jaya, 81100, Johor Bahru, Johor, Malaysia.</p>
@@ -200,6 +201,9 @@
 
         const hiddenElementsLeft = document.querySelectorAll('.scroll-hidden1');
         hiddenElementsLeft.forEach(el => observer.observe(el)); 
+
+        const hiddenElementsSpin = document.querySelectorAll('.scroll-hidden2');
+        hiddenElementsSpin.forEach(el => observer.observe(el)); 
     });
 
 

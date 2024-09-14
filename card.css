@@ -7,7 +7,7 @@
 .card {
     margin: 20px 20px;
     display: flex;
-    width: 70%;
+    width: 850px;
     height: fit-content;
     background-color: #fff;
     border-top: #333 solid 2px;
@@ -24,7 +24,8 @@
 }
 
 .card_info {
-    width: 70%;
+    width: 100%;
+    white-space: nowrap;
 }
 
 .card_info h2 {
@@ -32,7 +33,9 @@
 }
 
 .card_info p {
+    font-size: 18px !important;
     width: 100%;
+    font-weight: bold;
 }
 
 
@@ -48,12 +51,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-    gap: 3rem;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin: 0 5%;
+
 }
 
 .strategic-logo img {
-    width: 180px;
+    margin: 0 auto;
+    width: 15%;
     height: auto;
+}
+
+@media (max-width :1150px) {
+    .card_container {
+        transform: scale(0.8);
+    }
+    .strategic-tittle h2 {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width :700px) {
+    .card_container {
+        transform: scale(0.5);
+    }
+    .strategic-tittle h2 {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width :450px) {
+    .card_container {
+        transform: scale(0.4);
+    }
+    .strategic-tittle h2 {
+        font-size: 15px !important;
+    }
 }

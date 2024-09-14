@@ -31,9 +31,12 @@ p, a {
     font-size: 18px;
 }
 .our_company_title {
-    background-size: 100%;
+    background-size: cover;
     background-image: url(pictures/about_us_bg.png);
+    background-repeat: no-repeat;
     position: relative;
+    display: grid;
+    align-items: center;
     height: 300px;
 }
 
@@ -101,6 +104,7 @@ p, a {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
+    left: 5%;
 }
 
 
@@ -123,7 +127,6 @@ p, a {
 .ourcompany_background1 img {
     position: relative;
     width: 30%;
-    min-width: 300px;
     height: fit-content;
     margin: 5% 5%;
     top: -50px;
@@ -156,3 +159,42 @@ p, a {
     margin: 3% 5%;
     text-align: justify;
 }
+
+@media (max-width :1400px) {
+    .ourcompany_background {
+        width: 100%;
+    }
+    .ourcompany_background1 img {
+        width: 40%;
+        top: 0px;
+    }
+    
+ }
+
+ @media (max-width :1150px) {
+    .our_company_titlez h2::before {
+        display: none;
+    }
+}
+
+ @media (max-width :850px) {
+    .whyus, .commitment{
+        min-width: 300px;
+    }
+ }
+
+@media (max-width :480px) {
+   .our_company_title h2 {
+        font-size: 40px;
+        margin-right: 20%;
+   }
+   .ourcompany_background p, .whyus p, .commitment p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width :400px) {
+    .ourcompany_background p, .whyus p, .commitment p {
+         font-size: 15px;
+     }
+ }

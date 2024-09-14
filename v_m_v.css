@@ -36,11 +36,13 @@ body {
 }
 
 .v_m_v_title {
-    background-size: 100%;
+    background-size: cover;
     background-color: rgba(183, 225, 241, 0.919);
     background-image: url(pictures/about_us_bg.png);
     position: relative;
+    display: grid;
     height: 300px;
+    align-items: center;
 }
 
 
@@ -95,15 +97,15 @@ body {
 
 .vision, .mission, .value {
     position: relative;
-    width: 25%;
+    width: 360px;
     min-width: 200px;
     margin: 20px 30px;
     margin-top: 50px;
 }
 
 .vision img, .mission img , .value img {
-    width: 95%;
-    height: 40%;
+    width: 345px;
+    height: 265px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -115,8 +117,8 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 10%;
-    height: 10%;
+    width: 36px;
+    height: 36px;
     top: -135px;
 }
 
@@ -172,3 +174,27 @@ body {
     margin-right: 20px;
     margin-bottom: 10%;
 }
+
+@media (max-width :1150px) {
+    .v_m_v_title h2::before {
+        display: none;
+    }
+}
+
+@media (max-width :840px) {
+    .v_m_v_title h2 {
+        font-size: 40px;
+        margin-right: 20%;
+
+
+    }
+   
+}
+
+@media (max-width :500px) {
+    .vision_mission_value {
+        transform: scale(0.8);
+    }
+   
+}
+

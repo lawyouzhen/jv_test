@@ -21,6 +21,7 @@ header .jv {
     width: fit-content;
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
 header img {
@@ -67,6 +68,7 @@ header nav ul {
     
     /* 显示汉堡菜单按钮 */
     .hamburger {
+        position: relative;
         margin: 10px 30px;
         display: block;
         z-index: 5;
@@ -89,8 +91,8 @@ header nav ul {
         padding: 5px 0px 5px 15px;
         font-size: 16px;
     }
-    header .dropdown {
-        width: 250%;
+    header ul.active .dropdown {
+        width: 200%;
         display: none;
         position: absolute;
         top: 115%;
@@ -197,6 +199,15 @@ footer {
 }
 
 
-@media (max-width: 490px) {
-    
+@media (max-width: 590px) {
+    header h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 520px) {
+    header h1 {
+        white-space: wrap;
+        font-size: 28px;
+    }
 }

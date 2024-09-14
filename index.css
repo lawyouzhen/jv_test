@@ -48,23 +48,6 @@ p, a {
     right: 3%;            
 }
 
-@media (max-width :1260px) {
-    #home {
-        height: fit-content;
-    }
-
-    .home {
-        height: fit-content;
-    }
-    .homecontent {
-        top: unset;
-        width: 90%;                   
-        margin-bottom: 50px;
-    }
-    .homecontent h2::before {
-        right: 18%;                
-    }
-}
 
 .homecontent h2 {
     font-size: 50px;
@@ -109,26 +92,6 @@ p, a {
     top: -100px;
 }
 
-@media (max-width :1260px) {
-    #home .background {
-        height: 750px;
-    }
-    
-}
-
-@media (max-width :825px) {
-    #home .background {
-        height: 850px;
-    }
-    
-}
-
-@media (max-width :620px) {
-    #home .background {
-        height: 870px;
-    }
-    
-}
 
 
 /* Carousel Styles */
@@ -144,19 +107,7 @@ p, a {
     z-index: 100;
 }
 
-@media (max-width :1260px) {
-    .carousel {
-        right: 50%;
-        transform: translateX(50%);
-    }
-}
 
-@media (max-width :800px) {
-    .carousel {
-        right: 50%;
-        transform: translateX(50%) scale(0.7);
-    }
-}
 
 .carousel-inner {
     display: flex;
@@ -239,6 +190,59 @@ button.prev {
 
 button.next {
     right: 10px;
+}
+
+@media (max-width :1260px) {
+    #home {
+        height: fit-content;
+    }
+
+    .home {
+        height: fit-content;
+    }
+    .homecontent {
+        top: unset;
+        width: 90%;                   
+        margin-bottom: 50px;
+    }
+    .homecontent h2::before {
+        right: 18%;                
+    }
+    #home .background {
+        height: 750px;
+    }
+    .carousel {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+
+@media (max-width :825px) {
+    #home .background {
+        height: 850px;
+    }
+    
+}
+
+@media (max-width :800px) {
+    .carousel {
+        right: 50%;
+        transform: translateX(50%) scale(0.7);
+    }
+}
+
+@media (max-width :620px) {
+    #home .background {
+        height: 870px;
+    }
+    
+}
+
+@media (max-width :570px) {
+    .carousel {
+        transform: translateX(50%) scale(0.6);
+    }
 }
 
 .our_company_summary {

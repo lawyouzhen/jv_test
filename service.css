@@ -259,6 +259,10 @@ a {
     width: 65%;
 }
 
+#finance-section, #legacy-section,#claim-section {
+    scroll-margin-top: 30vh; /* 保证 section 在垂直方向的视窗中间 */
+}
+
 
 .contact-card {
     display: flex;

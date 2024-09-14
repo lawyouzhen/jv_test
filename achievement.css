@@ -8,8 +8,8 @@ body {
 
 .scroll-hidden {
     opacity: 0;
-    transform: translateX(100px); 
-    transition: all 2s ease-out;
+    mask-image: linear-gradient(90deg, transparent, black); /* 从左到右的遮罩 */
+    transition: mask-image 2s ease-out, opacity 2s ease-out;
 }
 
 .scroll-hidden1 {
@@ -20,7 +20,9 @@ body {
 
 .scroll-visible {
     opacity: 1;
-    transform: translateX(0) scale(1); 
+    opacity: 1;
+    mask-image: linear-gradient(90deg, black, black); 
+    transform: scale(1); 
 }
 
 

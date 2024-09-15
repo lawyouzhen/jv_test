@@ -4,25 +4,27 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 
 .scroll-hidden {
     opacity: 0;
-    mask-image: linear-gradient(90deg, transparent, black); /* 从左到右的遮罩 */
-    transition: mask-image 5s ease-out, opacity 1s ease-out;
+    transform: translateX(100px);
+    transition: all 2s ease-out;
 }
 
 .scroll-hidden1 {
     opacity: 0;
-    mask-image: linear-gradient(270deg, transparent, black); /* 从左到右的遮罩 */
-    transition: mask-image 5s ease-out, opacity 1s ease-out;
+    transform: translateX(-100px);
+    transition: all 2s ease-out;
 }
 
 
 .scroll-visible {
     opacity: 1;
-    mask-image: linear-gradient(90deg, black, black);  
+    transform: translateX(0px);
 }
 
 

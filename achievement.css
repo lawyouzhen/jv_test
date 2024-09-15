@@ -1,9 +1,15 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     position: relative;
     font-family: 'Righteous';
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .scroll-hidden {

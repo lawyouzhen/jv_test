@@ -1,9 +1,14 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     position: relative;
     font-family: 'Righteous';
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 p, a {
     font-size: 18px;
@@ -547,7 +552,7 @@ button.next {
         width: 80%;
     }
     .p_s_big_container::before {
-        height: 90%;
+        height: 95%;
     }
     .p_s {
         margin: 1px;
@@ -844,5 +849,7 @@ iframe {
     .facebook_comment {
         width: 90%;
     }
-   
+   .arrow {
+        width: 100%;
+   }
 }

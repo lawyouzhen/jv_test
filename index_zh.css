@@ -1,0 +1,13 @@
+@media (max-width :825px) {
+    #home .background {
+        height: 750px;
+    }
+    
+}
+
+@media (max-width :490px) {
+    #home .background {
+        height: 800px;
+    }
+    
+}

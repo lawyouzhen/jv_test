@@ -1,3 +1,5 @@
+
+
 body {
     position: relative;
     font-family: 'Righteous';
@@ -11,19 +13,19 @@ p, a {
 
 .scroll-hidden {
     opacity: 0;
-    transform: translateX(100px) scale(1.1); 
+    transform: scale(0.7); 
     transition: all 2s ease-out;
 }
 
 .scroll-hidden1 {
     opacity: 0;
-    transform: translateX(-100px) scale(1.1); 
+    transform: scale(0.7); 
     transition: all 2s ease-out;
 }
 
 .scroll-visible {
     opacity: 1;
-    transform: translateX(0) scale(1); 
+    transform: scale(1); 
 }
 
 #home {
@@ -547,7 +549,7 @@ button.next {
         width: 80%;
     }
     .p_s_big_container::before {
-        height: 90%;
+        height: 95%;
     }
     .p_s {
         margin: 1px;
@@ -844,5 +846,7 @@ iframe {
     .facebook_comment {
         width: 90%;
     }
-   
+   .arrow {
+        width: 100%;
+   }
 }

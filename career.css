@@ -67,7 +67,7 @@ h3.serviceh3 {
 .serviceh3::after {
     content: '';
     display: block;
-    width: 300px;
+    width: 250px;
     height: 5px;
     background-color: #28a745;
 }

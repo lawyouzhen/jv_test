@@ -170,6 +170,23 @@ p.service-provide {
     background: linear-gradient(90deg, #FFFFFF 2.85%, #5DBA6D 2.87%, #5DBA6D 6.01%, #FFFFFF 6.05%, #FFFFFF 9.15%, #5DBA6D 9.20%, #5DBA6D 12.10%, #FFFFFF 12.15%, #FFFFFF 15.33%, #5DBA6D 15.37%, #5DBA6D 75.76%, #EEFEF9 75.79%);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3A67B1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3A67B1;
+}
+
 @media (max-width :850px) {
     .admin_sales_content h2, .telemarketing_content h2, .internship_content h2, .sales_partner_content h2, .customer_services_content h2,.requirement h2, .benefit h2 {
         font-size: 40px;

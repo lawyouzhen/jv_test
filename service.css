@@ -459,10 +459,6 @@ a {
 }
 
 
-
-
-
-
 @media (max-width :475px) {
     .services-grid {
         display: flex;

@@ -605,6 +605,23 @@ button.next {
     height: fit-content;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3A67B1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3A67B1;
+}
+
 @media (max-width :1360px) {
     .career_summary_content p {
         line-height: 30px;

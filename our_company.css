@@ -12,28 +12,30 @@ body {
 
 .scroll-hidden {
     opacity: 0;
-    transform: translateY(100px); 
+    transform: translateY(100px);
     transition: all 2s ease-out;
 }
 
 .scroll-hidden1 {
     opacity: 0;
-    transform: scale(0.5); 
+    transform: scale(0.5);
     transition: all 2s ease-out;
 }
 
 .scroll-visible {
     opacity: 1;
-    transform: translateY(0) scale(1); 
+    transform: translateY(0) scale(1);
 }
 
 .green {
     color: #41C757;
 }
 
-p, a {
+p,
+a {
     font-size: 18px;
 }
+
 .our_company_title {
     background-size: cover;
     background-image: url(pictures/about_us_bg.png);
@@ -45,7 +47,7 @@ p, a {
 }
 
 .our_company_title h2 {
-    color: #1B48B2 ;
+    color: #1B48B2;
     display: inline-flex;
     justify-content: center;
     width: fit-content;
@@ -66,12 +68,12 @@ p, a {
     left: 0;
     width: 100%;
     height: 25%;
-    background-color: rgba(85, 255, 0, 0.35); 
-    transform: translateY(-50%); 
+    background-color: rgba(85, 255, 0, 0.35);
+    transform: translateY(-50%);
 }
 
 .our_company_title p {
-    color: #1B48B2 ;
+    color: #1B48B2;
     width: 60%;
     text-align: right;
     background-color: rgba(85, 255, 0, 0.35);
@@ -80,7 +82,7 @@ p, a {
     margin-left: 20%;
 }
 
-.blue_background{
+.blue_background {
     display: flex;
     position: relative;
     justify-content: center;
@@ -143,9 +145,11 @@ p, a {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    
+
 }
-.whyus, .commitment{
+
+.whyus,
+.commitment {
     margin: 10px 10px;
     position: relative;
     width: 35%;
@@ -155,11 +159,14 @@ p, a {
     border-radius: 20px;
     box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.06);
 }
-.whyus h2, .commitment h2 {
+
+.whyus h2,
+.commitment h2 {
     color: #4361EE;
 }
 
-.whyus p, .commitment p {
+.whyus p,
+.commitment p {
     margin: 3% 5%;
     text-align: justify;
 }
@@ -185,37 +192,57 @@ p, a {
     .ourcompany_background {
         width: 100%;
     }
+
     .ourcompany_background1 img {
         width: 40%;
         top: 0px;
     }
-    
- }
 
- @media (max-width :1150px) {
+}
+
+@media (max-width :1150px) {
     .our_company_titlez h2::before {
         display: none;
     }
 }
 
- @media (max-width :850px) {
-    .whyus, .commitment{
+@media (max-width :850px) {
+
+    .whyus,
+    .commitment {
         min-width: 300px;
     }
- }
+}
 
 @media (max-width :480px) {
-   .our_company_title h2 {
+    .our_company_title h2 {
         font-size: 40px;
         margin-right: 20%;
-   }
-   .ourcompany_background p, .whyus p, .commitment p {
+    }
+
+    .ourcompany_background p,
+    .whyus p,
+    .commitment p {
         font-size: 18px;
+    }
+
+    .ourcompany_background1 img {
+        width: 80%;
+        top: 0px;
+        justify-content: center;
+    }
+
+    .ourcompany_background {
+        margin: unset;
+        padding: unset;
     }
 }
 
 @media (max-width :400px) {
-    .ourcompany_background p, .whyus p, .commitment p {
-         font-size: 15px;
-     }
- }
+
+    .ourcompany_background p,
+    .whyus p,
+    .commitment p {
+        font-size: 15px;
+    }
+}

@@ -876,7 +876,7 @@ iframe {
     display: flex;
     width: 103.73%;
     height: 10%;
-    background: linear-gradient(90deg, #1877F2 0%, #1877F2 40%, #F1F9FF 40%, #F1F9FF 50%, #1877F2 50%, #1877F2 60%, #F1F9FF 60.21%, #F1F9FF 70%, #1877F2 70%, #1877F2 80%, #F1F9FF 80%, #F1F9FF 90%, rgba(24, 119, 242, 0.941176) 90% , rgba(24, 119, 242, 0.941176) 100%);
+    background: linear-gradient(90deg, #1877F2 0%, #1877F2 40%, #F1F9FF 40%, #F1F9FF 50%, #1877F2 50%, #1877F2 60%, #F1F9FF 60.21%, #F1F9FF 70%, #1877F2 70%, #1877F2 80%, #F1F9FF 80%, #F1F9FF 90%, rgba(24, 119, 242, 0.941176) 90%, rgba(24, 119, 242, 0.941176) 100%);
     border-radius: 0 0 10px 10px;
     bottom: 0;
     transform: translateY(37%);
@@ -886,7 +886,7 @@ iframe {
     font-weight: 900;
 }
 
-.design p{
+.design p {
     padding-left: 5%;
 }
 
@@ -913,7 +913,8 @@ iframe {
 @media (max-width :1160px) {
     .comment_content h2 {
         font-size: 40px !important;
-        left: 30%;
+        left: 32%;
+        top: 8%;
     }
 
 }
@@ -921,11 +922,45 @@ iframe {
 @media (max-width :1050px) {
     .facebook_comment img {
         top: 9%;
-        left: 2%;
+        left: 5%;
         position: absolute;
         width: 280px;
         margin: 2.5% 2.5%;
         height: fit-content;
+    }
+
+    .avatar img {
+        position: absolute;
+        transform: translateY(-30%);
+        left: 0;
+        margin: 2px 0 0 2px;
+        /* transform: translateX(20%); */
+        width: 18%;
+        height: auto;
+        border: 6px solid #1877F2;
+        border-radius: 116px;
+    }
+
+    .like_good img {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 0;
+        transform: translateX(260%);
+        margin: unset;
+    }
+
+    .comment_content h2 {
+        font-size: 36px !important;
+        margin: 0 20px;
+        margin-top: 20px;
+        text-align: left;
+        top: 0%;
+        left: 20%;
+    }
+
+    .iframe-slider {
+        width: 600px;
     }
 }
 
@@ -939,52 +974,77 @@ iframe {
         height: fit-content;
     }
 
+    .avatar img {
+        position: absolute;
+        transform: translateY(-30%);
+        left: 0;
+        margin: 2px 0 0 2px;
+        /* transform: translateX(20%); */
+        width: 18%;
+        height: auto;
+        border: 6px solid #1877F2;
+        border-radius: 116px;
+    }
+
+    .like_good img {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 0;
+        transform: translateX(260%);
+        margin: unset;
+    }
+
     .iframe-slider {
-        width: 330px;
+        width: 440px;
     }
 
     .comment {
         transform: scale(0.9);
     }
+    
 
     .comment_content h2 {
         font-size: 35px !important;
-        left: 20%;
+        text-align: left;
+        left: 0;
+        margin: 0 20px;
+        margin-top: 20px;
     }
 
 }
 
 @media (max-width :780px) {
-    .facebook_comment img {
-        top: 15%;
-        left: 10%;
-        position: absolute;
-        width: 200px;
-        margin: 2.5% 2.5%;
-        height: fit-content;
-    }
-
     .comment_content h2 {
-        font-size: 30px !important;
+        font-size: 35px !important;
     }
 
 }
 
 @media (max-width :650px) {
     .facebook_comment img {
-        top: 20%;
-        left: 7%;
-        position: absolute;
-        width: 200px;
-        margin: 2.5% 2.5%;
-        height: fit-content;
+        display: none;
     }
 
-}
+    .avatar img {
+        position: absolute;
+        transform: translateY(-30%);
+        left: 0;
+        margin: 2px 0 0 2px;
+        /* transform: translateX(20%); */
+        width: 18%;
+        height: auto;
+        border: 6px solid #1877F2;
+        border-radius: 116px;
+    }
 
-@media (max-width :600px) {
-    .facebook_comment img {
-        display: none;
+    .like_good img {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 0;
+        transform: translateX(260%);
+        margin: unset;
     }
 
     .comment_content {
@@ -1006,4 +1066,37 @@ iframe {
     .arrow {
         width: 100%;
     }
+
+}
+
+@media (max-width :600px) {
+    .facebook_comment img {
+        display: none;
+    }
+
+    .avatar img {
+        position: absolute;
+        transform: translateY(-30%);
+        left: 0;
+        margin: 2px 0 0 2px;
+        /* transform: translateX(20%); */
+        width: 18%;
+        height: auto;
+        border: 6px solid #1877F2;
+        border-radius: 116px;
+    }
+
+    .like_good img {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 0;
+        transform: translateX(260%);
+        margin: unset;
+    }
+
+    .iframe-slider {
+        width: 350px;
+    }
+
 }

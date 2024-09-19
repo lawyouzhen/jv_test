@@ -318,6 +318,20 @@ p.service-provide {
     width: 50%;
 }
 
+.team_info h3 {
+    font-size: 25px;
+    margin: 10px 0 ;
+}
+
+.award p {
+    padding: 8px;
+    background: #efef34;
+    border-radius: 5px;
+    width: fit-content;
+    font-style: italic;
+    font-weight: bold;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -434,6 +448,24 @@ p.service-provide {
         width: 100%;
         height: auto;
     }
+    .team_rec_container {
+        width: 40px;
+        height: 94.5%;
+    }
+    
+    .team_tri_container {
+        position: relative;
+        width: 6.8%;
+        height: 100%;
+    }
+    
+    .team_tri_container .team_tri1,
+    .team_tri_container .team_tri2 {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 40px solid #F4FEFF
+    }
+    
 }
 
 @media (max-width :475px) {

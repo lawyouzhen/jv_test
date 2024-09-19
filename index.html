@@ -149,17 +149,32 @@
                 <div class="iframe-slider">
                     <div class="iframe-container">
                         <div class="iframe-wrapper">
-                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheng.meparu%2Fposts%2Fpfbid02o3HFPugeXVSjBuMZzxNd2yE2Ai2tbhh2EuUenBXTTu3pTZbEG7DaTAAd9sLyA4Mtl&show_text=true&width=500" width="500" height="193" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwenchain.clara%2Fposts%2Fpfbid0qpUbKWDG4vZpYBruvDCYW12bKq38KYHAY9aftH8Mvbp8mheSVifSPb6W6o2tRjCMl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fyyyfchan%2Fposts%2Fpfbid026qkjLPVEby6vx77rTnVVQX3VhFfYpYAxvtapxvicoK1xVRDdcct4d5nd4PfrjEnhl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <div class="slide">
+                                Comment 1 <br> <hr> <p>Jason & Aivy 在信托遗嘱方面真的很专业也很细心，永远以顾客的需求为主，是我碰过最有耐心和细心的agent~</p>
+                            </div>
+                            <div class="slide">Comment 2 <br> <hr> <p>服务态度很好，我一个小白他也很耐心解释很清楚，支持！</p></div>
+                            <div class="slide">
+                                <div class="fbcomment">
+                                    <h3>Goh Wei TIng</h3>
+                                    <div class="fbc">
+                                        <p>Jason & Aivy 在信托遗嘱方面真的很专业也很细心，永远以顾客的需求为主，是我碰过最有耐心和细心的agent~</p>
+                                    </div>
+                                    <img src="" class="avatar">
+                                    <img src="https://scontent.fkul3-5.fna.fbcdn.net/v/t1.18169-…mwfB3Ui5gYnYwieBDY8qDAwph2dQagezv6NMQ&oe=67134DDA" alt="" class="design">
+                                    <div class="tri">
+
+                                    </div>
+                                    <div class="f">f</div>
+                                </div>
+                            </div>
+                            <div class="slide">Comment 4</div>
+                            <div class="slide">Comment 5</div>
                         </div>
                     </div>
                 </div>
                 <div class="arrow">
-                    <button class="prev" onclick="slideIframes(-1)">&#10094;</button>
-                    <button class="next" onclick="slideIframes(1)">&#10095;</button>
+                    <button class="prev" onclick="slideDivs(-1)">&#10094;</button>
+                    <button class="next" onclick="slideDivs(1)">&#10095;</button>
                 </div>
             </div>
         </div>
@@ -268,27 +283,26 @@
                 }
             });
         });
-
         let currentIndex = 0;
-
-        function slideIframes(direction) {
-            const iframeWrapper = document.querySelector('.iframe-wrapper');
-            const iframes = document.querySelectorAll('.iframe-wrapper iframe');
-            const iframeWidth = iframes[0].offsetWidth + 20; // Include margin
-            const maxIndex = iframes.length -1 ; // Show two iframes at once
-
-            currentIndex += direction;
-
-            // Limit the sliding to the bounds
-            if (currentIndex < 0) {
-                currentIndex = 0;
-            } else if (currentIndex > maxIndex) {
-                currentIndex = maxIndex;
+            
+            function slideDivs(direction) {
+                const iframeWrapper = document.querySelector('.iframe-wrapper');
+                const slides = document.querySelectorAll('.iframe-wrapper .slide'); // 选择所有的 div
+                const slideWidth = slides[0].offsetWidth + 15; // 假设每个 div 之间有 margin
+                const maxIndex = slides.length - 1; // 最后一个 slide 的索引
+        
+                currentIndex += direction;
+        
+                // 限制滑动范围
+                if (currentIndex < 0) {
+                    currentIndex = 0;
+                } else if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
+        
+                // 移动 div
+                iframeWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
             }
-
-            // Move the iframes
-            iframeWrapper.style.transform = `translateX(-${currentIndex * iframeWidth}px)`;
-        }
     </script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 body {
     position: relative;
     font-family: 'Righteous';
@@ -7,32 +5,34 @@ body {
     margin: 0;
     padding: 0;
 }
-p, a {
+
+p,
+a {
     font-size: 18px;
 }
 
 .scroll-hidden {
     opacity: 0;
-    transform: scale(0.7); 
+    transform: scale(0.7);
     transition: all 2s ease-out;
 }
 
 .scroll-hidden1 {
     opacity: 0;
-    transform: scale(0.7); 
+    transform: scale(0.7);
     transition: all 2s ease-out;
 }
 
 .scroll-visible {
     opacity: 1;
-    transform: scale(1); 
+    transform: scale(1);
 }
 
 #home {
-    display: flex;               
-    flex-direction: row-reverse;         
+    display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
-    align-items: center;          
+    align-items: center;
     height: 100vh;
     position: relative;
     z-index: 100;
@@ -42,12 +42,12 @@ p, a {
 .homecontent {
     top: -100px;
     position: relative;
-    width: 30%;                  
+    width: 30%;
     min-width: 350px;
-    padding: 20px;              
-    box-sizing: border-box;       
-    z-index: 1; 
-    right: 3%;            
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    right: 3%;
 }
 
 
@@ -55,24 +55,24 @@ p, a {
     font-size: 50px;
     color: #fff;
     position: relative;
-    z-index: -200;                 
+    z-index: -200;
     padding: 20px;
     margin: 0;
-    background-color: #6f91c9;   
-    display: inline-block;       
+    background-color: #6f91c9;
+    display: inline-block;
     border-radius: 20px;
 }
 
 .homecontent h2::before {
-    
+
     content: "";
     position: absolute;
     top: 0;
-    left: -19%;                
-    width: 93vw;               
+    left: -19%;
+    width: 93vw;
     height: 100%;
-    background-color: #6f91c9;   
-    z-index: -100;                 
+    background-color: #6f91c9;
+    z-index: -100;
     border-radius: 20px;
 }
 
@@ -97,7 +97,8 @@ p, a {
 
 /* Carousel Styles */
 .carousel {
-    width: 60%;                   /* Carousel width */
+    width: 60%;
+    /* Carousel width */
     min-width: 750px;
     height: fit-content;
     position: relative;
@@ -139,15 +140,15 @@ input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:nth-of-type(1):checked ~ .carousel-inner {
+input[type="radio"]:nth-of-type(1):checked~.carousel-inner {
     transform: translateX(0);
 }
 
-input[type="radio"]:nth-of-type(2):checked ~ .carousel-inner {
+input[type="radio"]:nth-of-type(2):checked~.carousel-inner {
     transform: translateX(-33.333%);
 }
 
-input[type="radio"]:nth-of-type(3):checked ~ .carousel-inner {
+input[type="radio"]:nth-of-type(3):checked~.carousel-inner {
     transform: translateX(-66.666%);
 }
 
@@ -171,16 +172,17 @@ input[type="radio"]:nth-of-type(3):checked ~ .carousel-inner {
     transition: background-color 0.3s;
 }
 
-input[type="radio"]:nth-of-type(1):checked ~ .carousel-controls #control1,
-input[type="radio"]:nth-of-type(2):checked ~ .carousel-controls #control2,
-input[type="radio"]:nth-of-type(3):checked ~ .carousel-controls #control3 {
+input[type="radio"]:nth-of-type(1):checked~.carousel-controls #control1,
+input[type="radio"]:nth-of-type(2):checked~.carousel-controls #control2,
+input[type="radio"]:nth-of-type(3):checked~.carousel-controls #control3 {
     background-color: #333;
 }
 
 /* Add more styles for additional controls */
 
 /* Buttons */
-button.prev, button.next {
+button.prev,
+button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -208,17 +210,21 @@ button.next {
     .home {
         height: fit-content;
     }
+
     .homecontent {
         top: unset;
-        width: 90%;                   
+        width: 90%;
         margin-bottom: 50px;
     }
+
     .homecontent h2::before {
-        right: 18%;                
+        right: 18%;
     }
+
     #home .background {
         height: 750px;
     }
+
     .carousel {
         right: 50%;
         transform: translateX(50%);
@@ -230,7 +236,7 @@ button.next {
     #home .background {
         height: 850px;
     }
-    
+
 }
 
 @media (max-width :800px) {
@@ -238,30 +244,34 @@ button.next {
         right: 50%;
         transform: translateX(50%) scale(0.7);
     }
+
     .homecontent p {
         font-size: 18px !important;
     }
-    
+
 }
 
 @media (max-width :620px) {
     #home .background {
         height: 820px;
     }
+
     h2 {
         font-size: 40px !important;
     }
-    
-    
+
+
 }
 
 @media (max-width :570px) {
     .carousel {
         transform: translateX(50%) scale(0.6);
     }
+
     .homecontent h2 {
         font-size: 40px !important;
     }
+
     h2 {
         font-size: 30px !important;
     }
@@ -271,21 +281,22 @@ button.next {
     .carousel {
         transform: translateX(50%) scale(0.55);
     }
+
     .homecontent h2 {
         font-size: 40px !important;
     }
-    
+
 }
 
 @media (max-width :480px) {
     .homecontent p {
         font-size: 16px !important;
     }
-    
+
     #home .background {
         height: 840px;
     }
-    
+
 }
 
 @media (max-width :430px) {
@@ -338,7 +349,7 @@ button.next {
 }
 
 .custom-hr::before {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .custom-hr::after {
@@ -347,7 +358,7 @@ button.next {
 
 .custom-hr a {
     text-decoration: none;
-    color:unset;
+    color: unset;
 }
 
 .data_container {
@@ -376,21 +387,21 @@ button.next {
 .img-container::before {
     content: '';
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     height: 50%;
     background: #83E393;
     border-radius: 20px;
-    z-index: 0; 
+    z-index: 0;
 }
 
 .our_company_summary img {
     width: 70%;
     height: auto;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
     display: inline-flex;
 }
 
@@ -398,36 +409,41 @@ button.next {
     .our_company_summary h2 br {
         display: none;
     }
+
     p {
         font-size: 16px !important;
     }
+
     .custom-hr a {
         font-size: 16px !important;
     }
-    
+
 }
 
 @media (max-width :600px) {
     .our_company_summary h2 {
         font-size: 30px;
     }
+
     p {
         font-size: 14px !important;
     }
+
     .custom-hr a {
         font-size: 14px !important;
     }
+
     .data_container .data {
         margin: 0 3%;
     }
-    
+
 }
 
 
 .our_product_and_services_summary {
     position: relative;
     text-align: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 .p_s_summary_content {
@@ -456,7 +472,7 @@ button.next {
 
 .p_s_big_container {
     position: relative;
-    z-index: 1; 
+    z-index: 1;
     padding-top: 50px;
     padding-bottom: 80px;
     width: 70%;
@@ -471,20 +487,20 @@ button.next {
 .p_s_big_container::before {
     content: '';
     position: absolute;
-    top: -50px; 
+    top: -50px;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #83E393; 
+    background: #83E393;
     border-radius: 55px;
-    z-index: -3; 
+    z-index: -3;
 }
 
 .p_s_container {
     position: relative;
     width: 100%;
-    height: fit-content; 
-    background-color: transparent; 
+    height: fit-content;
+    background-color: transparent;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -495,21 +511,21 @@ button.next {
 .p_s_container::before {
     content: '';
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 70%; 
-    height: 40%; 
-    background-color: #fff; 
-    border-radius: 25px; 
-    z-index: 0; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 40%;
+    background-color: #fff;
+    border-radius: 25px;
+    z-index: 0;
     top: 70%;
 }
 
 .p_s {
-    width: 25%; 
+    width: 25%;
     margin: 10px;
-    z-index: 1; 
+    z-index: 1;
     position: relative;
     min-width: 100px;
 }
@@ -537,13 +553,14 @@ button.next {
     .p_s h2 {
         font-size: 13px !important;
     }
-    
+
 }
 
 @media (max-width :900px) {
     .p_s h2 {
         font-size: 9px !important;
     }
+
     .p_s img {
         width: 95%;
         height: auto;
@@ -555,21 +572,23 @@ button.next {
     .p_s_summary_content p {
         width: 80%;
     }
+
     .p_s_big_container::before {
         height: 95%;
     }
+
     .p_s {
         margin: 1px;
     }
-    
+
 }
 
 @media (max-width :520px) {
     .p_s_container::before {
         display: none;
     }
-    
-    
+
+
 }
 
 
@@ -577,7 +596,8 @@ button.next {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    background: linear-gradient(90deg, #50C063 69.48%, #FFFFFF 69.48%, #FFFFFF 73.42%, #4FC162 73.47%, #41C757 77.3%, #FFFFFF 77.35%, #FFFFFF 81.49%, #41C757 81.5%, #5DBA6D 85.45%, #FFFFFF 85.45%, #FFFFFF 89.49%, #41C757 89.5%);;
+    background: linear-gradient(90deg, #50C063 69.48%, #FFFFFF 69.48%, #FFFFFF 73.42%, #4FC162 73.47%, #41C757 77.3%, #FFFFFF 77.35%, #FFFFFF 81.49%, #41C757 81.5%, #5DBA6D 85.45%, #FFFFFF 85.45%, #FFFFFF 89.49%, #41C757 89.5%);
+    ;
 }
 
 .career_summary_content {
@@ -633,13 +653,14 @@ button.next {
     .career_summary_content p {
         line-height: 30px;
     }
-    
+
 }
 
 @media (max-width :1150px) {
     .career_summary_content p {
         font-size: 15px !important;
     }
+
     .career_summary_content p {
         line-height: 20px;
     }
@@ -649,6 +670,7 @@ button.next {
     .career_summary_content p {
         font-size: 14px !important;
     }
+
     .career_summary_content p {
         line-height: 18px;
     }
@@ -658,11 +680,13 @@ button.next {
     .career_summary_content {
         width: 100%;
     }
+
     .career_summary img {
         width: 80%;
         margin: 2% 0%;
         height: fit-content;
     }
+
     .career_summary_content p {
         line-height: 50px;
         font-size: 18px !important;
@@ -670,7 +694,7 @@ button.next {
 }
 
 @media (max-width :700px) {
-   
+
     .career_summary_content p {
         line-height: 45px;
         font-size: 16px !important;
@@ -678,10 +702,11 @@ button.next {
 }
 
 @media (max-width :520px) {
-   
+
     .career_summary_content p {
         line-height: 30px;
     }
+
     .career_summary_content {
         min-width: 370px;
     }
@@ -722,8 +747,8 @@ button.next {
     width: 100%;
     position: relative;
     margin: unset;
-    left: 10%;
-    text-align: right;
+    left: 20%;
+    text-align: left;
 }
 
 .iframe-slider {
@@ -736,7 +761,7 @@ button.next {
 
 .iframe-container {
     overflow: hidden;
-    width: 95%; /* Display space for two iframes */
+    width: 95%;
 }
 
 .iframe-wrapper {
@@ -745,7 +770,7 @@ button.next {
 }
 
 iframe {
-    margin: 0 10px; /* Add some spacing between iframes */
+    margin: 0 10px;
 }
 
 .arrow {
@@ -754,7 +779,9 @@ iframe {
     width: fit-content;
     height: fit-content;
 }
-.arrow .prev, .arrow .next {
+
+.arrow .prev,
+.arrow .next {
     background-color: rgba(0, 0, 0, 0.5);
     height: fit-content;
     color: white;
@@ -772,17 +799,18 @@ iframe {
     .iframe-slider {
         width: 660px;
     }
+
     .iframe-container {
         width: 95%;
     }
-    
+
 }
 
 @media (max-width :1270px) {
     .comment_content h2 {
         left: 30%;
     }
-    
+
 }
 
 @media (max-width :1160px) {
@@ -790,7 +818,7 @@ iframe {
         font-size: 40px !important;
         left: 30%;
     }
-    
+
 }
 
 @media (max-width :1050px) {
@@ -813,17 +841,20 @@ iframe {
         margin: 2.5% 2.5%;
         height: fit-content;
     }
+
     .iframe-slider {
         width: 330px;
     }
+
     .comment {
         transform: scale(0.9);
     }
+
     .comment_content h2 {
         font-size: 35px !important;
         left: 20%;
     }
-    
+
 }
 
 @media (max-width :780px) {
@@ -835,10 +866,11 @@ iframe {
         margin: 2.5% 2.5%;
         height: fit-content;
     }
+
     .comment_content h2 {
         font-size: 30px !important;
     }
-   
+
 }
 
 @media (max-width :650px) {
@@ -850,27 +882,31 @@ iframe {
         margin: 2.5% 2.5%;
         height: fit-content;
     }
-   
+
 }
 
 @media (max-width :600px) {
     .facebook_comment img {
         display: none;
     }
+
     .comment_content {
         left: 0%;
         width: 100%;
     }
+
     .comment_content h2 {
         margin: 0 20px;
         margin-top: 20px;
-       text-align: center;
+        text-align: center;
         left: 0%;
     }
+
     .facebook_comment {
         width: 90%;
     }
-   .arrow {
+
+    .arrow {
         width: 100%;
-   }
+    }
 }

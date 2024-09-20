@@ -1084,6 +1084,7 @@ iframe {
         height: auto;
         border: 6px solid #1877F2;
         border-radius: 116px;
+        display: flex;
     }
 
     .like_good img {
@@ -1093,6 +1094,7 @@ iframe {
         top: 0;
         transform: translateX(260%);
         margin: unset;
+        display: flex;
     }
 
     .iframe-slider {

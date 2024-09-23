@@ -298,7 +298,7 @@ button.next {
     }
 
     50% {
-        transform: translateX(-23%);
+        transform: translateX(-55%);
         /* 中间位置，图片向左移动23% */
     }
 
@@ -309,7 +309,7 @@ button.next {
 }
 
 #cc_slider {
-    animation: moveBackAndForth 10s ease-in-out infinite;
+    animation: moveBackAndForth 20s ease-in-out infinite;
 }
 
 .cc_img::-webkit-scrollbar {

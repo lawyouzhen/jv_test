@@ -335,11 +335,12 @@ p.service-provide {
 }
 .award p {
     padding: 8px;
-    background: #efef34;
+    background: #f2c95a;
     border-radius: 5px;
     width: fit-content;
     font-style: italic;
     font-weight: bold;
+    font-size: 16px;
     margin: 10px;
 }
 

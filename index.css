@@ -786,8 +786,8 @@ iframe {
 .arrow {
     display: flex;
     justify-content: center;
-    width: fit-content;
-    height: fit-content;
+    width: 115px;
+    height: 68px;
 }
 
 .arrow .prev,

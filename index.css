@@ -1111,4 +1111,9 @@ iframe {
         width: 350px;
     }
 
+    .arrow .prev,
+    .arrow .next {
+        
+        margin: 5% 3%;
+    }
 }

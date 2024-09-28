@@ -793,7 +793,7 @@ iframe {
 .arrow .prev,
 .arrow .next {
     background-color: rgba(0, 0, 0, 0.5);
-    height: fit-content;
+    height: 50px;
     color: white;
     border: none;
     padding: 10px;

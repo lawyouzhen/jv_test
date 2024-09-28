@@ -13,11 +13,13 @@
     background-color: #fff;
     border-top: #333 solid 2px;
     border-bottom: #333 solid 2px;
+    align-items: center;
 }
 
 .card img {
     width: 150px;
     height: 150px;
+
 }
 
 .card_info .small {
@@ -37,6 +39,9 @@
     font-size: 18px !important;
     width: 100%;
     font-weight: bold;
+    display: flex;
+    white-space: wrap;
+    flex-wrap: wrap;
 }
 
 
@@ -79,6 +84,15 @@
     }
     .strategic-tittle h2 {
         font-size: 18px !important;
+    }
+}
+
+@media (max-width :450px) {
+    .card_container {
+        transform: scale(0.4);
+    }
+    .strategic-tittle h2 {
+        font-size: 15px !important;
     }
 }
 

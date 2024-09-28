@@ -3,9 +3,9 @@ header {
     color: #fff;
     padding: 1rem 0;
     top: 0;
-    position: fixed !important; 
+    position: sticky !important; 
     width: 100%;
-    height: fit-content;
+    height: 70px;
     z-index: 500;
     border-bottom: rgba(0, 0, 0, 0.25) solid 5px;
 }

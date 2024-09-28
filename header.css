@@ -3,7 +3,7 @@ header {
     color: #fff;
     padding: 1rem 0;
     top: 0;
-    position: sticky !important; 
+    position: fixed !important; 
     width: 100%;
     height: fit-content;
     z-index: 500;

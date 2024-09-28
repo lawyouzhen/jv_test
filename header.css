@@ -209,6 +209,6 @@ footer {
 @media (max-width: 520px) {
     header h1 {
         white-space: wrap;
-        font-size: 28px;
+        font-size: 20px;
     }
 }

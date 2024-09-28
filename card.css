@@ -6,7 +6,7 @@
 }
 
 .card {
-    margin: 20px 20px;
+    margin: 5% 5%;
     display: flex;
     width: 850px;
     height: fit-content;
@@ -27,8 +27,8 @@
 }
 
 .card_info {
-    width: 100%;
-    white-space: nowrap;
+    width: 650px;
+    /* white-space: nowrap; */
 }
 
 .card_info h2 {
@@ -39,9 +39,7 @@
     font-size: 18px !important;
     width: 100%;
     font-weight: bold;
-    display: flex;
-    white-space: wrap;
-    flex-wrap: wrap;
+   
 }
 
 

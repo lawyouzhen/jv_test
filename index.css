@@ -197,6 +197,7 @@ button.next {
     padding: 10px;
     cursor: pointer;
     z-index: 1;
+    font-size: 25px;
 }
 
 button.prev {
@@ -290,7 +291,11 @@ button.next {
     .homecontent h2 {
         font-size: 40px !important;
     }
-
+    button.prev,
+    button.next {
+        padding: 20px;
+        font-size: 25px;
+    }
 }
 
 @media (max-width :480px) {

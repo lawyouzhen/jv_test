@@ -1,7 +1,7 @@
 header {
     background: #3a67b1;
     color: #fff;
-    padding: 1rem 0;
+    padding: 10px 0;
     top: 0;
     position: sticky !important; 
     width: 100%;
@@ -15,6 +15,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    height: 70px;
     margin: 0 auto;
 }
 
@@ -23,11 +24,12 @@ header .jv {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    height: 65px;
 }
 
 header img {
     width: 65px;
-    height: fit-content;
+    height: 65px;
     background-color: white;
     border-radius: 10px;
     margin: 0 10px;
@@ -70,7 +72,7 @@ header nav ul {
     /* 显示汉堡菜单按钮 */
     .hamburger {
         position: relative;
-        margin: 10px 30px;
+        padding: 3% 10%;
         display: block;
         z-index: 5;
     }

@@ -533,11 +533,11 @@ button.next {
 }
 
 .p_s {
-    width: 25%;
+    width: 20%;
     margin: 10px;
     z-index: 1;
     position: relative;
-    min-width: 100px;
+    min-width: 120px;
 }
 
 .p_s h2 {
@@ -559,9 +559,9 @@ button.next {
     height: auto;
 }
 
-@media (max-width :1025px) {
+@media (max-width :1245px) {
     .p_s h2 {
-        font-size: 13px !important;
+        font-size: 11px !important;
     }
 
 }

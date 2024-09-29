@@ -269,6 +269,7 @@ a {
 
 #finance-section,
 #legacy-section,
+#healthcare-section,
 #claim-section {
     scroll-margin-top: 30vh;
     /* 保证 section 在垂直方向的视窗中间 */

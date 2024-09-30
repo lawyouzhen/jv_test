@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wavy Pattern</title>
     <style>
+
+
+
+
+
         body {
             margin: 0;
             padding: 0;
@@ -110,5 +115,58 @@
     </div>
 
     
+
+
+
+    <div class="comment scroll-hidden">
+        <div class="facebook_comment">
+            <img src="pictures/rates.png" alt="">
+            <div class="comment_content">
+                <h2>客户对我们的<span class="green"><br>评价</span></h2>
+                <div class="iframe-slider">
+                    <div class="iframe-container">
+                        <div class="iframe-wrapper">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcheng.meparu%2Fposts%2Fpfbid02o3HFPugeXVSjBuMZzxNd2yE2Ai2tbhh2EuUenBXTTu3pTZbEG7DaTAAd9sLyA4Mtl&show_text=true&width=500" width="500" height="193" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwenchain.clara%2Fposts%2Fpfbid0qpUbKWDG4vZpYBruvDCYW12bKq38KYHAY9aftH8Mvbp8mheSVifSPb6W6o2tRjCMl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fyyyfchan%2Fposts%2Fpfbid026qkjLPVEby6vx77rTnVVQX3VhFfYpYAxvtapxvicoK1xVRDdcct4d5nd4PfrjEnhl&show_text=true&width=500" width="500" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fholygege%2Fposts%2Fpfbid027fv79mKr1fEyddFFtH5BuVnujyn9Z1FhndLFSNc952V16FPeNdi119eEFWiefp7Bl&show_text=true&width=500" width="500" height="188" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <button class="prev" onclick="slideIframes(-1)">&#10094;</button>
+                    <button class="next" onclick="slideIframes(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <script>
+     let currentIndex = 0;
+     
+             function slideIframes(direction) {
+                 const iframeWrapper = document.querySelector('.iframe-wrapper');
+                 const iframes = document.querySelectorAll('.iframe-wrapper iframe');
+                 const iframeWidth = iframes[0].offsetWidth + 20; // Include margin
+                 const maxIndex = iframes.length -1 ; // Show two iframes at once
+     
+                 currentIndex += direction;
+     
+                 // Limit the sliding to the bounds
+                 if (currentIndex < 0) {
+                     currentIndex = 0;
+                 } else if (currentIndex > maxIndex) {
+                     currentIndex = maxIndex;
+                 }
+     
+                 // Move the iframes
+                 iframeWrapper.style.transform = `translateX(-${currentIndex * iframeWidth}px)`;
+             }
+ </script>   
+
+
+
 </body>
 </html>

@@ -113,7 +113,7 @@ a {
 
 .carousel-inner {
     display: flex;
-    width: 300%;
+    width: 400%;
     transition: transform 1s ease;
 }
 
@@ -145,11 +145,15 @@ input[type="radio"]:nth-of-type(1):checked~.carousel-inner {
 }
 
 input[type="radio"]:nth-of-type(2):checked~.carousel-inner {
-    transform: translateX(-33.333%);
+    transform: translateX(-25%);
 }
 
 input[type="radio"]:nth-of-type(3):checked~.carousel-inner {
-    transform: translateX(-66.666%);
+    transform: translateX(-50%);
+}
+
+input[type="radio"]:nth-of-type(4):checked~.carousel-inner {
+    transform: translateX(-75%);
 }
 
 /* Add more transform values for additional images */
@@ -174,7 +178,8 @@ input[type="radio"]:nth-of-type(3):checked~.carousel-inner {
 
 input[type="radio"]:nth-of-type(1):checked~.carousel-controls #control1,
 input[type="radio"]:nth-of-type(2):checked~.carousel-controls #control2,
-input[type="radio"]:nth-of-type(3):checked~.carousel-controls #control3 {
+input[type="radio"]:nth-of-type(3):checked~.carousel-controls #control3,
+input[type="radio"]:nth-of-type(4):checked~.carousel-controls #control4 {
     background-color: #333;
 }
 
@@ -192,6 +197,7 @@ button.next {
     padding: 10px;
     cursor: pointer;
     z-index: 1;
+    font-size: 25px;
 }
 
 button.prev {
@@ -285,7 +291,11 @@ button.next {
     .homecontent h2 {
         font-size: 40px !important;
     }
-
+    button.prev,
+    button.next {
+        padding: 20px;
+        font-size: 25px;
+    }
 }
 
 @media (max-width :480px) {
@@ -523,11 +533,11 @@ button.next {
 }
 
 .p_s {
-    width: 25%;
+    width: 20%;
     margin: 10px;
     z-index: 1;
     position: relative;
-    min-width: 100px;
+    min-width: 120px;
 }
 
 .p_s h2 {
@@ -549,9 +559,9 @@ button.next {
     height: auto;
 }
 
-@media (max-width :1025px) {
+@media (max-width :1245px) {
     .p_s h2 {
-        font-size: 13px !important;
+        font-size: 11px !important;
     }
 
 }
@@ -776,14 +786,14 @@ iframe {
 .arrow {
     display: flex;
     justify-content: center;
-    width: fit-content;
-    height: fit-content;
+    width: 115px;
+    height: 68px;
 }
 
 .arrow .prev,
 .arrow .next {
     background-color: rgba(0, 0, 0, 0.5);
-    height: fit-content;
+    height: 50px;
     color: white;
     border: none;
     padding: 10px;
@@ -1101,4 +1111,9 @@ iframe {
         width: 350px;
     }
 
+    .arrow .prev,
+    .arrow .next {
+        
+        margin: 5% 3%;
+    }
 }

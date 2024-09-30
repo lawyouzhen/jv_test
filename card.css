@@ -6,18 +6,20 @@
 }
 
 .card {
-    margin: 20px 20px;
+    margin: 5% 5%;
     display: flex;
     width: 850px;
     height: fit-content;
     background-color: #fff;
     border-top: #333 solid 2px;
     border-bottom: #333 solid 2px;
+    align-items: center;
 }
 
 .card img {
     width: 150px;
     height: 150px;
+
 }
 
 .card_info .small {
@@ -25,8 +27,8 @@
 }
 
 .card_info {
-    width: 100%;
-    white-space: nowrap;
+    width: 650px;
+    /* white-space: nowrap; */
 }
 
 .card_info h2 {
@@ -37,6 +39,7 @@
     font-size: 18px !important;
     width: 100%;
     font-weight: bold;
+   
 }
 
 
@@ -79,6 +82,15 @@
     }
     .strategic-tittle h2 {
         font-size: 18px !important;
+    }
+}
+
+@media (max-width :450px) {
+    .card_container {
+        transform: scale(0.4);
+    }
+    .strategic-tittle h2 {
+        font-size: 15px !important;
     }
 }
 

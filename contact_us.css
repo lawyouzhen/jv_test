@@ -300,6 +300,7 @@ p.service-provide {
     flex-wrap: wrap;
     /* justify-content: center; */
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .team_member {

@@ -201,7 +201,7 @@ a {
 }
 
 @media (max-width :1150px) {
-    .our_company_titlez h2::before {
+    .our_company_title h2::before {
         display: none;
     }
 }

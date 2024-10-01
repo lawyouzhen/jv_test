@@ -52,6 +52,7 @@
             <input type="radio" name="carousel" id="slide1" checked>
             <input type="radio" name="carousel" id="slide2">
             <input type="radio" name="carousel" id="slide3">
+            <input type="radio" name="carousel" id="slide4">
             <!-- Add more inputs for additional images -->
 
             <div class="carousel-inner">
@@ -59,10 +60,17 @@
                     <img src="pictures/jv_group.jpg" alt="Image 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="pictures/jv_group.jpg" alt="Image 2">
+                    <img control src="pictures/clam.jpg" alt="Image 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="pictures/jv_group.jpg" alt="Image 3">
+                    <video controls>
+                        <source src="Jv_video1.mp4" type="video/mp4">
+                      </video>
+                </div>
+                <div class="carousel-item">
+                    <video controls>
+                        <source src="Jv_video2.mp4" type="video/mp4">
+                      </video>
                 </div>
                 <!-- Add more carousel-item divs for additional images -->
             </div>
@@ -71,11 +79,12 @@
                 <label for="slide1" class="control" id="control1"></label>
                 <label for="slide2" class="control" id="control2"></label>
                 <label for="slide3" class="control" id="control3"></label>
+                <label for="slide4" class="control" id="control4"></label>
                 <!-- Add more labels for additional images -->
             </div>
 
-            <button class="prev" onclick="document.getElementById('slide1').checked ? document.getElementById('slide3').checked = true : document.querySelector('input[name=carousel]:checked').previousElementSibling.checked = true;">&#10094;</button>
-            <button class="next" onclick="document.getElementById('slide3').checked ? document.getElementById('slide1').checked = true : document.querySelector('input[name=carousel]:checked').nextElementSibling.checked = true;">&#10095;</button>
+            <button class="prev" onclick="document.getElementById('slide1').checked ? document.getElementById('slide4').checked = true : document.querySelector('input[name=carousel]:checked').previousElementSibling.checked = true;">&#10094;</button>
+            <button class="next" onclick="document.getElementById('slide4').checked ? document.getElementById('slide1').checked = true : document.querySelector('input[name=carousel]:checked').nextElementSibling.checked = true;">&#10095;</button>
         </div>
         <div class="homecontent">
             <h2 class="scroll-hidden1">未雨绸缪，安全导航</h2>

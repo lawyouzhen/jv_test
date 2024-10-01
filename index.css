@@ -639,7 +639,7 @@ button.next {
 .career_summary img {
     width: 50%;
     margin: 2% 0%;
-    height: fit-content;
+    height: max-content;
 }
 
 ::-webkit-scrollbar {

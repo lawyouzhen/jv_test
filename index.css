@@ -639,7 +639,7 @@ button.next {
 .career_summary img {
     width: 50%;
     margin: 2% 0%;
-    height: auto;
+    height: fit-content;
 }
 
 ::-webkit-scrollbar {
@@ -694,7 +694,7 @@ button.next {
     .career_summary img {
         width: 80%;
         margin: 2% 0%;
-        height: fit-content;
+        height: auto;
     }
 
     .career_summary_content p {

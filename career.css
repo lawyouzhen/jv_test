@@ -94,7 +94,7 @@ p.service-provide {
 .admin_sales, .telemarketing, .internship {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: center;
 }
@@ -112,6 +112,7 @@ p.service-provide {
     margin: 50px 2.5%;
     width: 35%;
     height: fit-content;
+    border-radius: 15px;
 }
 
 .sales_partner, .customer_services {
@@ -136,7 +137,9 @@ p.service-provide {
     margin: 50px 2.5%;
     width: 35%;
     height: fit-content;
+    border-radius: 15px;
 }
+
 
 .requirement_benefit {
     position: relative;
@@ -201,12 +204,24 @@ p.service-provide {
         width: 80%;
     }
     .admin_sales img, .telemarketing img, .internship img , .sales_partner img, .customer_services img {
-        width: 60%;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: auto;
     }
+
+
 }
 
 @media (max-width :600px) {
     .requirement, .benefit {
         width: 100%;
+    }
+
+    .admin_sales_content h2, .telemarketing_content h2, .internship_content h2, .sales_partner_content h2, .customer_services_content h2,.requirement h2, .benefit h2 {
+        margin: unset;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }

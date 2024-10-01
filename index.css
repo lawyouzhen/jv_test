@@ -259,7 +259,7 @@ button.next {
 
 @media (max-width :620px) {
     #home .background {
-        height: 820px;
+        height: 800px;
     }
 
     h2 {
@@ -304,7 +304,7 @@ button.next {
     }
 
     #home .background {
-        height: 840px;
+        height: 800px;
     }
 
 }

@@ -259,7 +259,7 @@ button.next {
 
 @media (max-width :620px) {
     #home .background {
-        height: 820px;
+        height: 800px;
     }
 
     h2 {
@@ -304,7 +304,7 @@ button.next {
     }
 
     #home .background {
-        height: 840px;
+        height: 800px;
     }
 
 }
@@ -639,7 +639,7 @@ button.next {
 .career_summary img {
     width: 50%;
     margin: 2% 0%;
-    height: max-content;
+    height: fit-content;
 }
 
 ::-webkit-scrollbar {
@@ -694,7 +694,7 @@ button.next {
     .career_summary img {
         width: 80%;
         margin: 2% 0%;
-        height: fit-content;
+        height: auto;
     }
 
     .career_summary_content p {

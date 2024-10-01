@@ -196,6 +196,7 @@ a {
     .ourcompany_background1 img {
         width: 40%;
         top: 0px;
+        height: auto;
     }
 
 }
@@ -228,6 +229,7 @@ a {
 
     .ourcompany_background1 img {
         width: 80%;
+        height: auto;
         top: 0px;
         justify-content: center;
     }

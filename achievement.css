@@ -368,10 +368,11 @@ button.next {
 @media (max-width :840px) {
     .achievement_title h2 {
         font-size: 40px;
-
-
     }
-   
+    .cc_bg::before {
+        border-radius: 0px;
+        width: 100%;
+    }
 }
 
 
@@ -398,7 +399,10 @@ button.next {
 
         transform: scale(0.5);
     }
-    
+    button.prev, button.next {     
+        padding: 20px;
+        font-size: 25px;
+    }
     .cc_img {
         height: 300px;
     }

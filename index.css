@@ -315,6 +315,12 @@ button.next {
     }
 }
 
+@media (max-width :375px) {
+    .carousel {
+        transform: translateX(50%) scale(0.45);
+    }
+
+}
 .our_company_summary {
     position: relative;
     text-align: center;

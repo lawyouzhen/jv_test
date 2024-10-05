@@ -384,14 +384,12 @@
             const dropdownMenu = document.getElementById('dropdownMenu');
             let isMenuVisible = false;
 
-            // Toggle dropdown menu
             aboutUsLink.addEventListener('click', function (e) {
                 e.preventDefault();
                 isMenuVisible = !isMenuVisible;
                 dropdownMenu.style.display = isMenuVisible ? 'block' : 'none';
             });
 
-            // Close dropdown when clicking outside
             document.addEventListener('click', function (event) {
                 if (!aboutUsLink.contains(event.target) && !dropdownMenu.contains(event.target)) {
                     dropdownMenu.style.display = 'none';
@@ -399,7 +397,6 @@
                 }
             });
 
-            // Add active class to the current page's nav link
             const currentPage = window.location.href.split('/').pop(); // 获取当前页面文件名
             const navLinks = document.querySelectorAll('.nav-link');
 
@@ -413,20 +410,18 @@
             
             function slideDivs(direction) {
                 const iframeWrapper = document.querySelector('.iframe-wrapper');
-                const slides = document.querySelectorAll('.iframe-wrapper .slide'); // 选择所有的 div
-                const slideWidth = slides[0].offsetWidth + 50; // 假设每个 div 之间有 margin
-                const maxIndex = slides.length - 1; // 最后一个 slide 的索引
+                const slides = document.querySelectorAll('.iframe-wrapper .slide'); 
+                const slideWidth = slides[0].offsetWidth + 50; //margin between slide
+                const maxIndex = slides.length - 1; 
         
                 currentIndex += direction;
         
-                // 限制滑动范围
                 if (currentIndex < 0) {
                     currentIndex = 0;
                 } else if (currentIndex > maxIndex) {
                     currentIndex = maxIndex;
                 }
-        
-                // 移动 div
+
                 iframeWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
             }
     </script>

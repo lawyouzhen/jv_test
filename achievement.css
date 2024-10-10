@@ -231,6 +231,7 @@ button.next {
     height: fit-content;
     text-align: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .cc_bg::before {

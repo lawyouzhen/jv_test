@@ -95,10 +95,9 @@ a {
 
 
 
-/* Carousel Styles */
+
 .carousel {
     width: 60%;
-    /* Carousel width */
     min-width: 750px;
     height: fit-content;
     position: relative;
@@ -315,6 +314,12 @@ button.next {
     }
 }
 
+@media (max-width :375px) {
+    .carousel {
+        transform: translateX(50%) scale(0.45);
+    }
+
+}
 .our_company_summary {
     position: relative;
     text-align: center;
@@ -847,7 +852,6 @@ iframe {
     transform: translateY(-30%);
     left: 0;
     margin: 2px 0 0 2px;
-    /* transform: translateX(20%); */
     width: 18%;
     height: auto;
     border: 6px solid #1877F2;
@@ -944,7 +948,6 @@ iframe {
         transform: translateY(-30%);
         left: 0;
         margin: 2px 0 0 2px;
-        /* transform: translateX(20%); */
         width: 18%;
         height: auto;
         border: 6px solid #1877F2;
@@ -989,7 +992,6 @@ iframe {
         transform: translateY(-30%);
         left: 0;
         margin: 2px 0 0 2px;
-        /* transform: translateX(20%); */
         width: 18%;
         height: auto;
         border: 6px solid #1877F2;
@@ -1041,7 +1043,6 @@ iframe {
         transform: translateY(-30%);
         left: 0;
         margin: 2px 0 0 2px;
-        /* transform: translateX(20%); */
         width: 18%;
         height: auto;
         border: 6px solid #1877F2;
@@ -1089,7 +1090,6 @@ iframe {
         transform: translateY(-30%);
         left: 0;
         margin: 2px 0 0 2px;
-        /* transform: translateX(20%); */
         width: 18%;
         height: auto;
         border: 6px solid #1877F2;

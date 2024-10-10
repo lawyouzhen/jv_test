@@ -239,7 +239,7 @@ button.next {
 
 @media (max-width :825px) {
     #home .background {
-        height: 850px;
+        height: 820px;
     }
 
 }
@@ -253,7 +253,9 @@ button.next {
     .homecontent p {
         font-size: 18px !important;
     }
-    
+    #home .background {
+        height: 850px;
+    }
 }
 
 @media (max-width :620px) {
@@ -283,6 +285,10 @@ button.next {
     h2 {
         font-size: 30px !important;
     }
+    #home .background {
+        height: 780px;
+    }
+
 }
 
 @media (max-width :500px) {
@@ -303,7 +309,7 @@ button.next {
         height: 750px;
     }
     #home {
-        height: 95vh;
+        height: 100vh;
     }
 
 }

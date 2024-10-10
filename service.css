@@ -443,8 +443,8 @@ a {
     .panda-icon {
         position: absolute;
         right: 0;
-        bottom: 200px;
-        width: 15vw;
+        bottom: 150px;
+        width: 18vw;
         height: auto;
     }
 
@@ -516,4 +516,41 @@ a {
         box-sizing: border-box;
         flex-grow: 1;
     }
+
+    h2.serviceh2 {
+        color: #000000;
+        font-size: 0.6em;
+        margin: 0 auto;
+        padding-top: 70px;
+        margin-left: 60px;
+    }
+    
+    h3.serviceh3 {
+        color: #000000;
+        font-size: 1.6em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+    
+    .serviceh3::after {
+        content: '';
+        display: block;
+        width: 230px;
+        height: 4px;
+        background-color: #28a745;
+    }
+
+    p.service-provide {
+        font-size: 1.2em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+    
+    .service-item p {
+        font-size: 15px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+
 }

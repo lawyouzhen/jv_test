@@ -127,7 +127,7 @@ p.service-provide {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    border-left: #28a745 solid 5px;
+    border-left: #28a745 solid 8px;
     justify-content: center;
 
     margin: 0 5% 100px 5%;
@@ -139,11 +139,31 @@ p.service-provide {
     width: 90%;
 }
 
+.working_hour h2 {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.working_hour p, .working_hour li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
 .working_hour li {
     list-style-position: inside;
 }
 .working-hour h2, .working-hour p {
     position: relative;
+}
+
+.working_hour::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 8px;
+    height: 100%;
+    background-color: #28a745;
+    left: 5px;
 }
 
 .enquiry {
@@ -569,7 +589,17 @@ p.service-provide {
 
     .working_hour {
         margin: 80px 0;
+        width: 98%;
     }
+    .working_hour h2, .working_hour p, .working_hour li{
+        margin-left: 15px;
+    }
+
+    .working_hour li {
+        margin: unset;
+        margin-left: 15px;
+    }
+
     .enquiry {
         margin-top: 100px;
     }

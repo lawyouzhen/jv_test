@@ -300,6 +300,7 @@ button.next {
 @media (max-width :480px) {
     .homecontent p {
         font-size: 16px !important;
+        margin: 5%;
     }
 
     #home .background {

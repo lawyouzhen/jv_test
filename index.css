@@ -253,7 +253,7 @@ button.next {
     .homecontent p {
         font-size: 18px !important;
     }
-
+    
 }
 
 @media (max-width :620px) {
@@ -271,8 +271,11 @@ button.next {
 @media (max-width :570px) {
     .carousel {
         transform: translateX(50%) scale(0.6);
+        top: -40px;
     }
-
+    .homecontent {
+        top: -90px;
+    }
     .homecontent h2 {
         font-size: 30px !important;
     }
@@ -295,6 +298,14 @@ button.next {
         padding: 20px;
         font-size: 25px;
     }
+   
+    #home .background {
+        height: 750px;
+    }
+    #home {
+        height: 95vh;
+    }
+
 }
 
 @media (max-width :480px) {
@@ -303,9 +314,6 @@ button.next {
         margin: 5%;
     }
 
-    #home .background {
-        height: 800px;
-    }
 
 }
 
@@ -603,7 +611,21 @@ button.next {
     .p_s_container::before {
         display: none;
     }
+    .p_s_big_container::before {     
+        width: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
+}
+
+@media (max-width :380px) {
+ 
+    .p_s_big_container::before {     
+        width: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
 }
 
@@ -724,7 +746,7 @@ button.next {
     }
 
     .career_summary_content {
-        min-width: 370px;
+        min-width: 350px;
     }
 }
 

@@ -1116,7 +1116,7 @@ iframe {
 
     .avatar img {
         position: absolute;
-        transform: translateY(-30%);
+        transform: translateY(-45%);
         left: 0;
         margin: 2px 0 0 2px;
         width: 18%;

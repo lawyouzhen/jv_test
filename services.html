@@ -86,7 +86,7 @@
                 <div class="line-start"></div>
                 <div class="left-column">
                     <h2>Risk Management</h2>
-                    <p>We help you set goals, manage investments, and grow your wealth.</p>
+                    <p>Helping to respond to emergencies, avoiding financial losses and ensuring that property and income are protected.</p>
                     <img src="pictures\risk_image.png" alt="风险规划图片">
                 </div>
                 <div class="line-center"></div>
@@ -110,7 +110,7 @@
                 <div class="line-start"></div>
                 <div class="left-column">
                     <h2>Insurance Services</h2>
-                    <p>We help you plan for immediate and long-term health needs.</p>
+                    <p>Protect against financial stress from unforeseen events, such as illness, fire or car accidents.</p>
                     <img src="pictures\insurance_image.png" alt="保险图片">
                 </div>
                 <div class="line-center"></div>
@@ -135,7 +135,7 @@
                 <div class="line-start"></div>
                 <div class="left-column">
                     <h2>Financial Management</h2>
-                    <p>We assist with wills, trusts, and charitable giving to preserve your assets.</p>
+                    <p>Ensure future financial security through planning and investing to achieve savings and wealth enhancement goals.</p>
                     <img src="pictures\finance_image.png" alt="财务规划图片">
                 </div>
                 <div class="line-center"></div>
@@ -275,14 +275,12 @@
             const dropdownMenu = document.getElementById('dropdownMenu');
             let isMenuVisible = false;
 
-            // Toggle dropdown menu
             aboutUsLink.addEventListener('click', function (e) {
                 e.preventDefault();
                 isMenuVisible = !isMenuVisible;
                 dropdownMenu.style.display = isMenuVisible ? 'block' : 'none';
             });
 
-            // Close dropdown when clicking outside
             document.addEventListener('click', function (event) {
                 if (!aboutUsLink.contains(event.target) && !dropdownMenu.contains(event.target)) {
                     dropdownMenu.style.display = 'none';
@@ -290,8 +288,7 @@
                 }
             });
 
-            // Add active class to the current page's nav link
-            const currentPage = window.location.href.split('/').pop(); // 获取当前页面文件名
+            const currentPage = window.location.href.split('/').pop();
             const navLinks = document.querySelectorAll('.nav-link');
 
             navLinks.forEach(link => {
@@ -302,7 +299,7 @@
             const aboutUsPages = ['our_company.html', 'v_m_v.html', 'achievement.html'];
 
             if (aboutUsPages.includes(currentPage)) {
-                aboutUsLink.classList.add('active'); // 为"About Us"项添加 active 类
+                aboutUsLink.classList.add('active'); 
             }
         });
 
@@ -323,11 +320,9 @@
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault(); // 阻止默认锚点跳转
-
+                    e.preventDefault(); 
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth', // 使用平滑滚动
-                        // block: 'center'
+                        behavior: 'smooth',
                     });
                 });
             });

@@ -1,5 +1,3 @@
-
-
 body {
     position: relative;
     font-family: 'Righteous';
@@ -28,7 +26,7 @@ body {
 .scroll-visible {
     opacity: 1;
     transform: scale(1);
-    
+
 }
 
 
@@ -91,7 +89,9 @@ p.service-provide {
     color: #41C757;
 }
 
-.admin_sales, .telemarketing, .internship {
+.admin_sales,
+.telemarketing,
+.internship {
     position: relative;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -99,23 +99,30 @@ p.service-provide {
     justify-content: center;
 }
 
-.admin_sales_content, .telemarketing_content, .internship_content {
+.admin_sales_content,
+.telemarketing_content,
+.internship_content {
     margin: 2% 5%;
     width: 50%;
 }
 
-.admin_sales_content h2, .telemarketing_content h2, .internship_content h2 {
+.admin_sales_content h2,
+.telemarketing_content h2,
+.internship_content h2 {
     font-size: 50px;
 }
 
-.admin_sales img, .telemarketing img, .internship img {
+.admin_sales img,
+.telemarketing img,
+.internship img {
     margin: 50px 2.5%;
     width: 35%;
     height: fit-content;
     border-radius: 15px;
 }
 
-.sales_partner, .customer_services {
+.sales_partner,
+.customer_services {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -124,16 +131,19 @@ p.service-provide {
     background: #e2fdf58f;
 }
 
-.sales_partner_content, .customer_services_content {
+.sales_partner_content,
+.customer_services_content {
     margin: 2% 5%;
     width: 50%;
 }
 
-.sales_partner_content h2, .customer_services_content h2 {
+.sales_partner_content h2,
+.customer_services_content h2 {
     font-size: 50px;
 }
 
-.sales_partner img, .customer_services img {
+.sales_partner img,
+.customer_services img {
     margin: 50px 2.5%;
     width: 35%;
     height: fit-content;
@@ -158,12 +168,14 @@ p.service-provide {
     background: linear-gradient(0deg, #EEFEF9 2.75%, #EEFEF9 89.92%, #40917A 90.07%);
 }
 
-.requirement h2, .benefit h2 {
+.requirement h2,
+.benefit h2 {
     font-size: 50px;
     margin: 5% 10%;
 }
 
-.requirement ul, .benefit ul {
+.requirement ul,
+.benefit ul {
     margin: 5% 10%;
 }
 
@@ -191,19 +203,43 @@ p.service-provide {
 }
 
 @media (max-width :850px) {
-    .admin_sales_content h2, .telemarketing_content h2, .internship_content h2, .sales_partner_content h2, .customer_services_content h2,.requirement h2, .benefit h2 {
+
+    .admin_sales_content h2,
+    .telemarketing_content h2,
+    .internship_content h2,
+    .sales_partner_content h2,
+    .customer_services_content h2,
+    .requirement h2,
+    .benefit h2 {
         font-size: 40px;
     }
-    .admin_sales_content li, .telemarketing_content li, .internship_content li, .sales_partner_content li, .customer_services_content li, .requirement ul, .benefit ul{
+
+    .admin_sales_content li,
+    .telemarketing_content li,
+    .internship_content li,
+    .sales_partner_content li,
+    .customer_services_content li,
+    .requirement ul,
+    .benefit ul {
         font-size: 14px;
     }
 }
 
 @media (max-width :700px) {
-    .admin_sales_content , .telemarketing_content , .internship_content , .sales_partner_content , .customer_services_content {
+
+    .admin_sales_content,
+    .telemarketing_content,
+    .internship_content,
+    .sales_partner_content,
+    .customer_services_content {
         width: 80%;
     }
-    .admin_sales img, .telemarketing img, .internship img , .sales_partner img, .customer_services img {
+
+    .admin_sales img,
+    .telemarketing img,
+    .internship img,
+    .sales_partner img,
+    .customer_services img {
         width: 80%;
         margin: 0 auto;
         margin-top: 20px;
@@ -215,13 +251,77 @@ p.service-provide {
 }
 
 @media (max-width :600px) {
-    .requirement, .benefit {
+
+    .requirement,
+    .benefit {
         width: 100%;
     }
 
-    .admin_sales_content h2, .telemarketing_content h2, .internship_content h2, .sales_partner_content h2, .customer_services_content h2,.requirement h2, .benefit h2 {
+    .admin_sales_content h2,
+    .telemarketing_content h2,
+    .internship_content h2,
+    .sales_partner_content h2,
+    .customer_services_content h2,
+    .requirement h2,
+    .benefit h2 {
         margin: unset;
         margin-top: 10px;
         margin-bottom: 10px;
     }
+}
+
+@media (max-width :475px) {
+    .services {
+        background-image: url('pictures/scc_background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 200px;
+    }
+
+    h2.serviceh2 {
+        color: #000000;
+        font-size: 0.6em;
+        margin: 0 auto;
+        padding-top: 70px;
+        margin-left: 60px;
+    }
+
+    h3.serviceh3 {
+        color: #000000;
+        font-size: 1.6em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+
+    .serviceh3::after {
+        content: '';
+        display: block;
+        width: 230px;
+        height: 4px;
+        background-color: #28a745;
+    }
+
+    p.service-provide {
+        font-size: 1.2em;
+        margin: 0 auto;
+        margin-left: 60px;
+    }
+
+    .panda-icon {
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+        width: 18vw;
+        height: auto;
+    }
+
+    .panda2 {
+    position: absolute;
+    width: 30%;
+    height: fit-content;
+    right: 0px;
+    bottom: 1px;
+}
 }

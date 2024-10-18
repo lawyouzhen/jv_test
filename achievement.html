@@ -177,7 +177,7 @@
         if (position1 > 0 || position1 < -(totalWidth1 - visibleWidth1)) {
             direction1 *= -1; // 当到达最左边或最右边时改变方向
         }
-        slider1.style.transform = `translateX(${position1}px)`;
+        slider1.style.transform = `translate3d(${position1}px, 0, 0)`;
 
         // 计算第二排的总宽度
         const totalWidth2 = slider2.scrollWidth;
@@ -188,7 +188,7 @@
         if (position2 > 0 || position2 < -(totalWidth2 - visibleWidth2)) {
             direction2 *= -1; // 当到达最左边或最右边时改变方向
         }
-        slider2.style.transform = `translateX(${position2}px)`;
+        slider2.style.transform = `translate3d(${position2}px, 0, 0)`;
 
         // 使用 requestAnimationFrame 进行下一帧调用
         requestAnimationFrame(scrollImages);

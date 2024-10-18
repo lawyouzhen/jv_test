@@ -283,6 +283,9 @@ button.next {
     margin-left: 160px;
 }
 
+#cc_slider1, #cc_slider2 {
+    will-change: transform;
+}
 
 .cc_img::-webkit-scrollbar {
     width: 5px;

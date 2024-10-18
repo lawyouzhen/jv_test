@@ -270,11 +270,12 @@ button.next {
     flex-wrap: nowrap;
     height: 40%;
     margin-top: 2.5%;
+    white-space: nowrap;
 }
 
 .first_row img, .second_row img {
     height: 95%;
-    width: auto; /* 改为 auto 以防止过宽或过窄 */
+    width: auto;
     margin-right: 40px;
 }
 
@@ -282,31 +283,6 @@ button.next {
     margin-left: 160px;
 }
 
-
-.first_row img, .second_row img {
-    margin-right: 40px;
-}
-
-@keyframes moveBackAndForth {
-    0% {
-        transform: translateX(0);
-        /* 起始位置 */
-    }
-
-    50% {
-        transform: translateX(-55%);
-        /* 中间位置，图片向左移动23% */
-    }
-
-    100% {
-        transform: translateX(0);
-        /* 返回到起始位置 */
-    }
-}
-
-#cc_slider {
-    animation: moveBackAndForth 20s ease-in-out infinite;
-}
 
 .cc_img::-webkit-scrollbar {
     width: 5px;

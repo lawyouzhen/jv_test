@@ -149,13 +149,18 @@ a {
 }
 
 .film {
+    display: flex;
+    position: relative;
     width: 100%;
-    height: auto;
-    margin: auto;
-    border-radius: 10px;
+    height: fit-content;
+    padding: 20px 0;
+    padding-top: 50px;
+    justify-content: center;
+
 }
 
 .film video {
+    position: relative;
     width: 70%;
     height: auto;
     margin: auto;

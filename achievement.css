@@ -279,9 +279,7 @@ button.next {
     margin-right: 40px;
 }
 
-.second_row {
-    margin-left: 160px;
-}
+
 
 #cc_slider1, #cc_slider2 {
     will-change: transform;

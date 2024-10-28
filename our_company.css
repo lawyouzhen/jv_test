@@ -149,6 +149,13 @@ a {
 }
 
 .film {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.film video {
     width: 70%;
     height: auto;
     margin: auto;

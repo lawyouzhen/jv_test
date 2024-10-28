@@ -232,6 +232,10 @@ a {
     .commitment {
         min-width: 300px;
     }
+
+    .film video {
+        width: 80%;    
+    }
 }
 
 @media (max-width :480px) {
@@ -256,6 +260,9 @@ a {
     .ourcompany_background {
         margin: unset;
         padding: unset;
+    }
+    .film video {
+        width: 90%;    
     }
 }
 

@@ -99,6 +99,8 @@
                     <img src="pictures/cc7.png" alt="">
                     <img src="pictures/cc15.jpg" alt="">
                     <img src="pictures/cc17.jpg" alt="">
+                    <img src="pictures/cc23.jpg" alt="">
+                    <img src="pictures/cc24.jpg" alt="">
                 </div>
                 <div class="second_row" id="cc_slider2">
                     <img src="pictures/cc2.jpg" alt="">
@@ -112,8 +114,7 @@
                     <img src="pictures/cc10.jpg" alt="">
                     <img src="pictures/cc14.jpg" alt="">
                     <img src="pictures/cc16.jpg" alt="">
-                    <img src="pictures/cc23.jpg" alt="">
-                    <img src="pictures/cc24.jpg" alt="">
+                
 
 
                 </div>
@@ -156,48 +157,121 @@
     </footer>
 
     <script>
+
     const slider1 = document.getElementById('cc_slider1');
     const slider2 = document.getElementById('cc_slider2');
 
 
-    let position1 = 0;
-    let direction1 = 1;
+    let position1 = 0, direction1 = 1;
+    let position2 = 0, direction2 = 1;
+    const scrollSpeed = 1; 
+    let isDragging = false; 
+    let lastTouchX; 
+    let autoScroll = true; 
+    let resumeScrollTimeout;
 
-    let position2 = 0;
-    let direction2 = 1;
 
+    function getSliderWidths(slider) {
+        return {
+            totalWidth: slider.scrollWidth,
+            visibleWidth: slider.parentElement.offsetWidth
+        };
+    }
 
-    const scrollSpeed = 1;
 
     function scrollImages() {
-   
-        const totalWidth1 = slider1.scrollWidth;
-        const visibleWidth1 = slider1.parentElement.offsetWidth;
+        if (autoScroll) {
+            const { totalWidth: totalWidth1, visibleWidth: visibleWidth1 } = getSliderWidths(slider1);
+            position1 += scrollSpeed * direction1;
+            if (position1 > 0 || position1 < -(totalWidth1 - visibleWidth1)) direction1 *= -1;
+            slider1.style.transform = `translate3d(${position1}px, 0, 0)`;
 
-  
-        position1 += scrollSpeed * direction1;
-        if (position1 > 0 || position1 < -(totalWidth1 - visibleWidth1)) {
-            direction1 *= -1; 
+            const { totalWidth: totalWidth2, visibleWidth: visibleWidth2 } = getSliderWidths(slider2);
+            position2 += scrollSpeed * direction2;
+            if (position2 > 0 || position2 < -(totalWidth2 - visibleWidth2)) direction2 *= -1;
+            slider2.style.transform = `translate3d(${position2}px, 0, 0)`;
         }
-        slider1.style.transform = `translate3d(${position1}px, 0, 0)`;
-
- 
-        const totalWidth2 = slider2.scrollWidth;
-        const visibleWidth2 = slider2.parentElement.offsetWidth;
-
-
-        position2 += scrollSpeed * direction2;
-        if (position2 > 0 || position2 < -(totalWidth2 - visibleWidth2)) {
-            direction2 *= -1;
-        }
-        slider2.style.transform = `translate3d(${position2}px, 0, 0)`;
-
-  
         requestAnimationFrame(scrollImages);
     }
 
 
+    function handleTouchStart(event) {
+        isDragging = true;
+        lastTouchX = event.touches[0].clientX;
+        autoScroll = false; 
+        clearTimeout(resumeScrollTimeout);
+    }
+
+    function handleTouchMove(event) {
+        if (!isDragging) return;
+
+        const currentTouchX = event.touches[0].clientX;
+        const deltaX = currentTouchX - lastTouchX;
+        lastTouchX = currentTouchX;
+
+
+        const { totalWidth: totalWidth1, visibleWidth: visibleWidth1 } = getSliderWidths(slider1);
+        const newPosition1 = position1 + deltaX;
+        if (newPosition1 <= 0 && newPosition1 >= -(totalWidth1 - visibleWidth1)) {
+            position1 = newPosition1;
+        }
+        slider1.style.transform = `translate3d(${position1}px, 0, 0)`;
+
+
+        const { totalWidth: totalWidth2, visibleWidth: visibleWidth2 } = getSliderWidths(slider2);
+        const newPosition2 = position2 + deltaX;
+        if (newPosition2 <= 0 && newPosition2 >= -(totalWidth2 - visibleWidth2)) {
+            position2 = newPosition2;
+        }
+        slider2.style.transform = `translate3d(${position2}px, 0, 0)`;
+    }
+
+    function handleTouchEnd() {
+        isDragging = false;
+        resumeScrollTimeout = setTimeout(() => {
+            autoScroll = true; 
+        }, 500); 
+    }
+
+
+    function handleWheel(event) {
+        event.preventDefault(); 
+        autoScroll = false; 
+        clearTimeout(resumeScrollTimeout);
+
+        const delta = event.deltaY || event.detail || event.wheelDelta;
+
+
+        const { totalWidth: totalWidth1, visibleWidth: visibleWidth1 } = getSliderWidths(slider1);
+        const newPosition1 = position1 - delta * 0.3;
+        if (newPosition1 <= 0 && newPosition1 >= -(totalWidth1 - visibleWidth1)) {
+            position1 = newPosition1;
+        }
+        slider1.style.transform = `translate3d(${position1}px, 0, 0)`;
+
+
+        const { totalWidth: totalWidth2, visibleWidth: visibleWidth2 } = getSliderWidths(slider2);
+        const newPosition2 = position2 - delta * 0.3;
+        if (newPosition2 <= 0 && newPosition2 >= -(totalWidth2 - visibleWidth2)) {
+            position2 = newPosition2;
+        }
+        slider2.style.transform = `translate3d(${position2}px, 0, 0)`;
+
+        resumeScrollTimeout = setTimeout(() => {
+            autoScroll = true;
+        }, 500);
+    }
+
+
+    slider1.parentElement.addEventListener('touchstart', handleTouchStart);
+    slider1.parentElement.addEventListener('touchmove', handleTouchMove);
+    slider1.parentElement.addEventListener('touchend', handleTouchEnd);
+    slider1.parentElement.addEventListener('wheel', handleWheel, { passive: false });
+    slider2.parentElement.addEventListener('wheel', handleWheel, { passive: false });
+
+
     requestAnimationFrame(scrollImages);
+
 
     const navLinks = document.querySelectorAll('.nav-link');
         

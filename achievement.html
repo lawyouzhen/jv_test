@@ -88,7 +88,7 @@
         <div class="cc_bg">
             <h2>Community <span class="green">contributions</span></h2>
             <div class="cc_img">
-                <div class="first_row" id="cc_slider">
+                <div class="first_row" id="cc_slider1">
                     <img src="pictures/cc1.jpg" alt="">
                     <img src="pictures/cc3.jpg" alt="">
                     <img src="pictures/cc5.jpg" alt="">
@@ -100,7 +100,7 @@
                     <img src="pictures/cc15.jpg" alt="">
                     <img src="pictures/cc17.jpg" alt="">
                 </div>
-                <div class="second_row" id="cc_slider">
+                <div class="second_row" id="cc_slider2">
                     <img src="pictures/cc2.jpg" alt="">
                     <img src="pictures/cc8.png" alt="">
                     <img src="pictures/cc20.jpg" alt="">
@@ -153,6 +153,48 @@
     </footer>
 
     <script>
+    const slider1 = document.getElementById('cc_slider1');
+    const slider2 = document.getElementById('cc_slider2');
+
+
+    let position1 = 0;
+    let direction1 = 1;
+
+    let position2 = 0;
+    let direction2 = 1;
+
+
+    const scrollSpeed = 1;
+
+    function scrollImages() {
+   
+        const totalWidth1 = slider1.scrollWidth;
+        const visibleWidth1 = slider1.parentElement.offsetWidth;
+
+  
+        position1 += scrollSpeed * direction1;
+        if (position1 > 0 || position1 < -(totalWidth1 - visibleWidth1)) {
+            direction1 *= -1; 
+        }
+        slider1.style.transform = `translate3d(${position1}px, 0, 0)`;
+
+ 
+        const totalWidth2 = slider2.scrollWidth;
+        const visibleWidth2 = slider2.parentElement.offsetWidth;
+
+
+        position2 += scrollSpeed * direction2;
+        if (position2 > 0 || position2 < -(totalWidth2 - visibleWidth2)) {
+            direction2 *= -1;
+        }
+        slider2.style.transform = `translate3d(${position2}px, 0, 0)`;
+
+  
+        requestAnimationFrame(scrollImages);
+    }
+
+
+    requestAnimationFrame(scrollImages);
 
     const navLinks = document.querySelectorAll('.nav-link');
         

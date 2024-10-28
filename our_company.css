@@ -148,6 +148,13 @@ a {
 
 }
 
+.film {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+}
+
 .whyus,
 .commitment {
     margin: 10px 10px;
